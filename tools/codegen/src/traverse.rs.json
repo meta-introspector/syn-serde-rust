@@ -1,0 +1,507 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "proc_macro2",
+            "tree": {
+              "ident": "TokenStream"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "syn_codegen",
+            "tree": {
+              "group": [
+                {
+                  "ident": "Definitions"
+                },
+                {
+                  "ident": "Node"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "vis": {
+          "restricted": {
+            "path": {
+              "segments": [
+                {
+                  "ident": "crate"
+                }
+              ]
+            }
+          }
+        },
+        "ident": "traverse",
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "defs"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Definitions"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "node"
+                }
+              },
+              "ty": {
+                "bare_fn": {
+                  "inputs": [
+                    {
+                      "ty": {
+                        "reference": {
+                          "mut": true,
+                          "elem": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "TokenStream"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "ty": {
+                        "reference": {
+                          "elem": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Node"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "ty": {
+                        "reference": {
+                          "elem": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Definitions"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "output": null
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "TokenStream"
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "mut": true,
+                  "ident": "types"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "field": {
+                        "base": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "defs"
+                              }
+                            ]
+                          }
+                        },
+                        "ident": "types"
+                      }
+                    },
+                    "method": "clone",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "method_call": {
+                  "receiver": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "types"
+                        }
+                      ]
+                    }
+                  },
+                  "method": "sort_by",
+                  "args": [
+                    {
+                      "closure": {
+                        "inputs": [
+                          {
+                            "ident": {
+                              "ident": "a"
+                            }
+                          },
+                          {
+                            "ident": {
+                              "ident": "b"
+                            }
+                          }
+                        ],
+                        "output": null,
+                        "body": {
+                          "method_call": {
+                            "receiver": {
+                              "field": {
+                                "base": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "a"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "ident": "ident"
+                              }
+                            },
+                            "method": "cmp",
+                            "args": [
+                              {
+                                "reference": {
+                                  "expr": {
+                                    "field": {
+                                      "base": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "b"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "ident": "ident"
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "mut": true,
+                  "ident": "impls"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "TokenStream"
+                          },
+                          {
+                            "ident": "new"
+                          }
+                        ]
+                      }
+                    },
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "for_loop": {
+                  "pat": {
+                    "ident": {
+                      "ident": "ty"
+                    }
+                  },
+                  "expr": {
+                    "method_call": {
+                      "receiver": {
+                        "method_call": {
+                          "receiver": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "types"
+                                }
+                              ]
+                            }
+                          },
+                          "method": "iter",
+                          "args": []
+                        }
+                      },
+                      "method": "filter",
+                      "args": [
+                        {
+                          "closure": {
+                            "inputs": [
+                              {
+                                "ident": {
+                                  "ident": "ty"
+                                }
+                              }
+                            ],
+                            "output": null,
+                            "body": {
+                              "block": {
+                                "stmts": [
+                                  {
+                                    "expr": [
+                                      {
+                                        "binary": {
+                                          "left": {
+                                            "paren": {
+                                              "expr": {
+                                                "binary": {
+                                                  "left": {
+                                                    "method_call": {
+                                                      "receiver": {
+                                                        "field": {
+                                                          "base": {
+                                                            "field": {
+                                                              "base": {
+                                                                "path": {
+                                                                  "segments": [
+                                                                    {
+                                                                      "ident": "ty"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              "ident": "features"
+                                                            }
+                                                          },
+                                                          "ident": "any"
+                                                        }
+                                                      },
+                                                      "method": "is_empty",
+                                                      "args": []
+                                                    }
+                                                  },
+                                                  "op": "||",
+                                                  "right": {
+                                                    "method_call": {
+                                                      "receiver": {
+                                                        "field": {
+                                                          "base": {
+                                                            "field": {
+                                                              "base": {
+                                                                "path": {
+                                                                  "segments": [
+                                                                    {
+                                                                      "ident": "ty"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              "ident": "features"
+                                                            }
+                                                          },
+                                                          "ident": "any"
+                                                        }
+                                                      },
+                                                      "method": "contains",
+                                                      "args": [
+                                                        {
+                                                          "lit": {
+                                                            "str": "\"full\""
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "op": "&&",
+                                          "right": {
+                                            "binary": {
+                                              "left": {
+                                                "field": {
+                                                  "base": {
+                                                    "path": {
+                                                      "segments": [
+                                                        {
+                                                          "ident": "ty"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "ident": "ident"
+                                                }
+                                              },
+                                              "op": "!=",
+                                              "right": {
+                                                "lit": {
+                                                  "str": "\"Reserved\""
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      false
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "body": [
+                    {
+                      "expr": [
+                        {
+                          "call": {
+                            "func": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "node"
+                                  }
+                                ]
+                              }
+                            },
+                            "args": [
+                              {
+                                "reference": {
+                                  "mut": true,
+                                  "expr": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "impls"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "ty"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "defs"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        true
+                      ]
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          },
+          {
+            "expr": [
+              {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "impls"
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

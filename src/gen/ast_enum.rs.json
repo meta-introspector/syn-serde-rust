@@ -1,0 +1,6673 @@
+{
+  "attrs": [
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "cfg_attr"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "rustfmt"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "rustfmt"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "skip"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::AttrStyle`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "AttrStyle",
+        "variants": [
+          {
+            "ident": "Outer",
+            "fields": "unit"
+          },
+          {
+            "ident": "Inner",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::BinOp`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "BinOp",
+        "variants": [
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"+\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Add",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"-\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Sub",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"*\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Mul",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"/\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Div",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"%\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Rem",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"&&\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "And",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"||\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Or",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"^\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "BitXor",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"&\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "BitAnd",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"|\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "BitOr",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"<<\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Shl",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\">>\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Shr",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"==\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Eq",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"<\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Lt",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"<=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Le",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"!=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Ne",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\">=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Ge",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\">\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Gt",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"+=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "AddAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"-=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "SubAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"*=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "MulAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"/=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "DivAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"%=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "RemAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"^=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "BitXorAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"&=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "BitAndAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"|=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "BitOrAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"<<=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "ShlAssign",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\">>=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "ShrAssign",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Expr`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Expr",
+        "variants": [
+          {
+            "ident": "Array",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprArray"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Assign",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprAssign"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Async",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprAsync"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Await",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprAwait"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Binary",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprBinary"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Block",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprBlock"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Break",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprBreak"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Call",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprCall"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Cast",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprCast"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Closure",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprClosure"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprConst"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Continue",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprContinue"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Field",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprField"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "ForLoop",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprForLoop"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Group",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprGroup"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "If",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprIf"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Index",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprIndex"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Infer",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprInfer"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Let",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprLet"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Lit",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprLit"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Loop",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprLoop"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Match",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprMatch"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "MethodCall",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprMethodCall"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Paren",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprParen"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Path",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprPath"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Range",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprRange"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Reference",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprReference"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Repeat",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprRepeat"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Return",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprReturn"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Struct",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprStruct"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Try",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprTry"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "TryBlock",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprTryBlock"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Tuple",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprTuple"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Unary",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprUnary"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Unsafe",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprUnsafe"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "While",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprWhile"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Yield",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprYield"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::FieldMutability`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "FieldMutability",
+        "variants": [
+          {
+            "ident": "None",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Fields`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Fields",
+        "variants": [
+          {
+            "ident": "Named",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "FieldsNamed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Unnamed",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "FieldsUnnamed"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Unit",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::FnArg`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "FnArg",
+        "variants": [
+          {
+            "ident": "Receiver",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Receiver"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Typed",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::ForeignItem`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "ForeignItem",
+        "variants": [
+          {
+            "ident": "Fn",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ForeignItemFn"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Static",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ForeignItemStatic"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ForeignItemType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ForeignItemMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::GenericArgument`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "GenericArgument",
+        "variants": [
+          {
+            "ident": "Lifetime",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Lifetime"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Type"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Expr"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "AssocType",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "AssocType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "AssocConst",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "AssocConst"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Constraint",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Constraint"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::GenericParam`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "GenericParam",
+        "variants": [
+          {
+            "ident": "Lifetime",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LifetimeParam"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeParam"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ConstParam"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::ImplItem`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "ImplItem",
+        "variants": [
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ImplItemConst"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Fn",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ImplItemFn"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ImplItemType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ImplItemMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::ImplRestriction`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "ImplRestriction",
+        "variants": []
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Item`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Item",
+        "variants": [
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemConst"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Enum",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemEnum"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "ExternCrate",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemExternCrate"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Fn",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemFn"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "ForeignMod",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemForeignMod"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Impl",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemImpl"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Mod",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemMod"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Static",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemStatic"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Struct",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemStruct"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Trait",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemTrait"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "TraitAlias",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemTraitAlias"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Union",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemUnion"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Use",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ItemUse"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Lit`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Lit",
+        "variants": [
+          {
+            "ident": "Str",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitStr"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "ByteStr",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitByteStr"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Byte",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitByte"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Char",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitChar"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Int",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitInt"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Float",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitFloat"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Bool",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "LitBool"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Literal"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::MacroDelimiter`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "MacroDelimiter",
+        "variants": [
+          {
+            "ident": "Paren",
+            "fields": "unit"
+          },
+          {
+            "ident": "Brace",
+            "fields": "unit"
+          },
+          {
+            "ident": "Bracket",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Member`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Member",
+        "variants": [
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"ident\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Named",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Ident"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"index\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Unnamed",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Index"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Meta`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Meta",
+        "variants": [
+          {
+            "ident": "Path",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Path"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "List",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "MetaList"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "NameValue",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "MetaNameValue"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Pat`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Pat",
+        "variants": [
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprConst"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Ident",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatIdent"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Lit",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprLit"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Or",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatOr"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Paren",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatParen"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Path",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprPath"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Range",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ExprRange"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Reference",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatReference"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Rest",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatRest"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Slice",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatSlice"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Struct",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatStruct"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Tuple",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatTuple"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "TupleStruct",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatTupleStruct"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"_\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Wild",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PatWild"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::PathArguments`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "PathArguments",
+        "variants": [
+          {
+            "ident": "None",
+            "fields": "unit"
+          },
+          {
+            "ident": "AngleBracketed",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "AngleBracketedGenericArguments"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Parenthesized",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ParenthesizedGenericArguments"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::RangeLimits`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "RangeLimits",
+        "variants": [
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"..\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "HalfOpen",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"..=\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Closed",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::StaticMutability`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "StaticMutability",
+        "variants": [
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"mut\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Mut",
+            "fields": "unit"
+          },
+          {
+            "ident": "None",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::TraitBoundModifier`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "TraitBoundModifier",
+        "variants": [
+          {
+            "ident": "None",
+            "fields": "unit"
+          },
+          {
+            "ident": "Maybe",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::TraitItem`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "TraitItem",
+        "variants": [
+          {
+            "ident": "Const",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TraitItemConst"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Fn",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TraitItemFn"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TraitItemType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TraitItemMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Type`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Type",
+        "variants": [
+          {
+            "ident": "Array",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeArray"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "BareFn",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeBareFn"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Group",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeGroup"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "ImplTrait",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeImplTrait"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"_\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Infer",
+            "fields": "unit"
+          },
+          {
+            "ident": "Macro",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeMacro"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"!\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Never",
+            "fields": "unit"
+          },
+          {
+            "ident": "Paren",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeParen"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Path",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypePath"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Ptr",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypePtr"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Reference",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeReference"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Slice",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeSlice"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "TraitObject",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeTraitObject"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Tuple",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TypeTuple"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::TypeParamBound`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "TypeParamBound",
+        "variants": [
+          {
+            "ident": "Trait",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TraitBound"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Lifetime",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Lifetime"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Verbatim",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::UnOp`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "UnOp",
+        "variants": [
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"*\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Deref",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"!\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Not",
+            "fields": "unit"
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"-\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Neg",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::UseTree`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "UseTree",
+        "variants": [
+          {
+            "ident": "Path",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "UsePath"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"ident\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Name",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "UseName"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Rename",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "UseRename"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"*\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Glob",
+            "fields": "unit"
+          },
+          {
+            "ident": "Group",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "UseGroup"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::Visibility`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Visibility",
+        "variants": [
+          {
+            "attrs": [
+              {
+                "style": "outer",
+                "meta": {
+                  "list": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde"
+                        }
+                      ]
+                    },
+                    "delimiter": "paren",
+                    "tokens": [
+                      {
+                        "ident": "rename"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "lit": "\"pub\""
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "ident": "Public",
+            "fields": "unit"
+          },
+          {
+            "ident": "Restricted",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "VisRestricted"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Inherited",
+            "fields": "unit"
+          }
+        ]
+      }
+    },
+    {
+      "enum": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" An adapter for [`enum@syn::WherePredicate`].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "derive"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "Serialize"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "Deserialize"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "serde"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "rename_all"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"snake_case\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "non_exhaustive"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "WherePredicate",
+        "variants": [
+          {
+            "ident": "Lifetime",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PredicateLifetime"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "Type",
+            "fields": {
+              "unnamed": [
+                {
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "PredicateType"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

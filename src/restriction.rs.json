@@ -1,0 +1,375 @@
+{
+  "items": [
+    {
+      "use": {
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "ast_enum",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "FieldMutability"
+                        },
+                        {
+                          "ident": "Visibility"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "ast_struct",
+                    "tree": {
+                      "ident": "VisRestricted"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "impl": {
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Visibility"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "vis": {
+                "restricted": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                }
+              },
+              "ident": "is_inherited",
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "ty": {
+                      "reference": {
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "bool"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "macro": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "matches"
+                            }
+                          ]
+                        },
+                        "delimiter": "paren",
+                        "tokens": [
+                          {
+                            "ident": "self"
+                          },
+                          {
+                            "punct": {
+                              "op": ",",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "Self"
+                          },
+                          {
+                            "punct": {
+                              "op": ":",
+                              "spacing": "joint"
+                            }
+                          },
+                          {
+                            "punct": {
+                              "op": ":",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "Inherited"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "Default"
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Visibility"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "ident": "default",
+              "inputs": [],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Self"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          },
+                          {
+                            "ident": "Inherited"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "FieldMutability"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "vis": {
+                "restricted": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                }
+              },
+              "ident": "is_none",
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "ty": {
+                      "reference": {
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "bool"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "macro": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "matches"
+                            }
+                          ]
+                        },
+                        "delimiter": "paren",
+                        "tokens": [
+                          {
+                            "ident": "self"
+                          },
+                          {
+                            "punct": {
+                              "op": ",",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "Self"
+                          },
+                          {
+                            "punct": {
+                              "op": ":",
+                              "spacing": "joint"
+                            }
+                          },
+                          {
+                            "punct": {
+                              "op": ":",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "None"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "Default"
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "FieldMutability"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "ident": "default",
+              "inputs": [],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Self"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          },
+                          {
+                            "ident": "None"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

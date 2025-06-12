@@ -1,0 +1,2581 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "proc_macro2",
+            "tree": {
+              "ident": "TokenStream"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "quote",
+            "tree": {
+              "group": [
+                {
+                  "ident": "format_ident"
+                },
+                {
+                  "ident": "quote"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "syn_codegen",
+            "tree": {
+              "group": [
+                {
+                  "ident": "Data"
+                },
+                {
+                  "ident": "Definitions"
+                },
+                {
+                  "ident": "Node"
+                },
+                {
+                  "ident": "Type"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "convert",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "EMPTY_STRUCTS"
+                        },
+                        {
+                          "ident": "IGNORED_TYPES"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "ident": "file"
+                },
+                {
+                  "ident": "traverse"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "const": {
+        "ident": "AST_ENUM_SRC",
+        "ty": {
+          "reference": {
+            "elem": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "str"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "expr": {
+          "lit": {
+            "str": "\"src/gen/ast_enum.rs\""
+          }
+        }
+      }
+    },
+    {
+      "const": {
+        "ident": "SKIPPED",
+        "ty": {
+          "reference": {
+            "elem": {
+              "slice": {
+                "elem": {
+                  "reference": {
+                    "elem": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "str"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "expr": {
+          "reference": {
+            "expr": {
+              "array": {
+                "elems": [
+                  {
+                    "lit": {
+                      "str": "\"Stmt\""
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "ident": "rename",
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "ident"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "str"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "variant"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "str"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Option",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "reference": {
+                            "lifetime": "static",
+                            "elem": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "str"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "expr": [
+              {
+                "match": {
+                  "expr": {
+                    "tuple": {
+                      "elems": [
+                        {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "ident"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "variant"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "arms": [
+                    {
+                      "pat": {
+                        "or": {
+                          "cases": [
+                            {
+                              "tuple": {
+                                "elems": [
+                                  {
+                                    "lit": {
+                                      "str": "\"Pat\""
+                                    }
+                                  },
+                                  {
+                                    "lit": {
+                                      "str": "\"Wild\""
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "tuple": {
+                                "elems": [
+                                  {
+                                    "lit": {
+                                      "str": "\"Type\""
+                                    }
+                                  },
+                                  {
+                                    "lit": {
+                                      "str": "\"Infer\""
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"_\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"Type\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Never\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"!\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"Stmt\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Local\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"let\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"UseTree\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Glob\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"*\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "or": {
+                          "cases": [
+                            {
+                              "tuple": {
+                                "elems": [
+                                  {
+                                    "lit": {
+                                      "str": "\"UseTree\""
+                                    }
+                                  },
+                                  {
+                                    "lit": {
+                                      "str": "\"Name\""
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "tuple": {
+                                "elems": [
+                                  {
+                                    "lit": {
+                                      "str": "\"Member\""
+                                    }
+                                  },
+                                  {
+                                    "lit": {
+                                      "str": "\"Named\""
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"ident\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"Member\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Unnamed\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"index\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"RangeLimits\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"HalfOpen\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"..\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"RangeLimits\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Closed\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"..=\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"Visibility\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Public\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"pub\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "tuple": {
+                          "elems": [
+                            {
+                              "lit": {
+                                "str": "\"StaticMutability\""
+                              }
+                            },
+                            {
+                              "lit": {
+                                "str": "\"Mut\""
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "body": {
+                        "call": {
+                          "func": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Some"
+                                }
+                              ]
+                            }
+                          },
+                          "args": [
+                            {
+                              "lit": {
+                                "str": "\"mut\""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "pat": {
+                        "_": {}
+                      },
+                      "body": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "None"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "ident": "node",
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "impls"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "mut": true,
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "TokenStream"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "node"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Node"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "defs"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Definitions"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": null,
+        "stmts": [
+          {
+            "expr": [
+              {
+                "if": {
+                  "cond": {
+                    "binary": {
+                      "left": {
+                        "method_call": {
+                          "receiver": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "SKIPPED"
+                                }
+                              ]
+                            }
+                          },
+                          "method": "contains",
+                          "args": [
+                            {
+                              "reference": {
+                                "expr": {
+                                  "reference": {
+                                    "expr": {
+                                      "unary": {
+                                        "op": "*",
+                                        "expr": {
+                                          "field": {
+                                            "base": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "node"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "ident": "ident"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "op": "||",
+                      "right": {
+                        "method_call": {
+                          "receiver": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "IGNORED_TYPES"
+                                }
+                              ]
+                            }
+                          },
+                          "method": "contains",
+                          "args": [
+                            {
+                              "reference": {
+                                "expr": {
+                                  "reference": {
+                                    "expr": {
+                                      "unary": {
+                                        "op": "*",
+                                        "expr": {
+                                          "field": {
+                                            "base": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "node"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "ident": "ident"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "then_branch": [
+                    {
+                      "expr": [
+                        {
+                          "return": {}
+                        },
+                        true
+                      ]
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          },
+          {
+            "expr": [
+              {
+                "if": {
+                  "cond": {
+                    "let": {
+                      "pat": {
+                        "tuple_struct": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Data"
+                              },
+                              {
+                                "ident": "Enum"
+                              }
+                            ]
+                          },
+                          "elems": [
+                            {
+                              "ident": {
+                                "ident": "variants"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "expr": {
+                        "reference": {
+                          "expr": {
+                            "field": {
+                              "base": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "node"
+                                    }
+                                  ]
+                                }
+                              },
+                              "ident": "data"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "then_branch": [
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "mut": true,
+                            "ident": "body"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "call": {
+                              "func": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "TokenStream"
+                                    },
+                                    {
+                                      "ident": "new"
+                                    }
+                                  ]
+                                }
+                              },
+                              "args": []
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "expr": [
+                        {
+                          "for_loop": {
+                            "pat": {
+                              "tuple": {
+                                "elems": [
+                                  {
+                                    "ident": {
+                                      "ident": "variant"
+                                    }
+                                  },
+                                  {
+                                    "ident": {
+                                      "ident": "fields"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            "expr": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "variants"
+                                  }
+                                ]
+                              }
+                            },
+                            "body": [
+                              {
+                                "expr": [
+                                  {
+                                    "method_call": {
+                                      "receiver": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "body"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "method": "extend",
+                                      "args": [
+                                        {
+                                          "method_call": {
+                                            "receiver": {
+                                              "call": {
+                                                "func": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "rename"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "args": [
+                                                  {
+                                                    "reference": {
+                                                      "expr": {
+                                                        "field": {
+                                                          "base": {
+                                                            "path": {
+                                                              "segments": [
+                                                                {
+                                                                  "ident": "node"
+                                                                }
+                                                              ]
+                                                            }
+                                                          },
+                                                          "ident": "ident"
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "path": {
+                                                      "segments": [
+                                                        {
+                                                          "ident": "variant"
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "method": "map",
+                                            "args": [
+                                              {
+                                                "closure": {
+                                                  "inputs": [
+                                                    {
+                                                      "ident": {
+                                                        "ident": "s"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "output": null,
+                                                  "body": {
+                                                    "macro": {
+                                                      "path": {
+                                                        "segments": [
+                                                          {
+                                                            "ident": "quote"
+                                                          }
+                                                        ]
+                                                      },
+                                                      "delimiter": "paren",
+                                                      "tokens": [
+                                                        {
+                                                          "punct": {
+                                                            "op": "#",
+                                                            "spacing": "alone"
+                                                          }
+                                                        },
+                                                        {
+                                                          "group": {
+                                                            "delimiter": "bracket",
+                                                            "stream": [
+                                                              {
+                                                                "ident": "serde"
+                                                              },
+                                                              {
+                                                                "group": {
+                                                                  "delimiter": "parenthesis",
+                                                                  "stream": [
+                                                                    {
+                                                                      "ident": "rename"
+                                                                    },
+                                                                    {
+                                                                      "punct": {
+                                                                        "op": "=",
+                                                                        "spacing": "alone"
+                                                                      }
+                                                                    },
+                                                                    {
+                                                                      "punct": {
+                                                                        "op": "#",
+                                                                        "spacing": "alone"
+                                                                      }
+                                                                    },
+                                                                    {
+                                                                      "ident": "s"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  true
+                                ]
+                              },
+                              {
+                                "let": {
+                                  "pat": {
+                                    "ident": {
+                                      "ident": "variant"
+                                    }
+                                  },
+                                  "init": {
+                                    "expr": {
+                                      "macro": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "format_ident"
+                                            }
+                                          ]
+                                        },
+                                        "delimiter": "paren",
+                                        "tokens": [
+                                          {
+                                            "lit": "\"{variant}\""
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "expr": [
+                                  {
+                                    "if": {
+                                      "cond": {
+                                        "method_call": {
+                                          "receiver": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "fields"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "method": "is_empty",
+                                          "args": []
+                                        }
+                                      },
+                                      "then_branch": [
+                                        {
+                                          "expr": [
+                                            {
+                                              "method_call": {
+                                                "receiver": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "body"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "method": "extend",
+                                                "args": [
+                                                  {
+                                                    "macro": {
+                                                      "path": {
+                                                        "segments": [
+                                                          {
+                                                            "ident": "quote"
+                                                          }
+                                                        ]
+                                                      },
+                                                      "delimiter": "paren",
+                                                      "tokens": [
+                                                        {
+                                                          "punct": {
+                                                            "op": "#",
+                                                            "spacing": "alone"
+                                                          }
+                                                        },
+                                                        {
+                                                          "ident": "variant"
+                                                        },
+                                                        {
+                                                          "punct": {
+                                                            "op": ",",
+                                                            "spacing": "alone"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            true
+                                          ]
+                                        }
+                                      ],
+                                      "else_branch": {
+                                        "block": {
+                                          "stmts": [
+                                            {
+                                              "macro": {
+                                                "path": {
+                                                  "segments": [
+                                                    {
+                                                      "ident": "assert"
+                                                    }
+                                                  ]
+                                                },
+                                                "delimiter": "paren",
+                                                "tokens": [
+                                                  {
+                                                    "ident": "fields"
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": ".",
+                                                      "spacing": "alone"
+                                                    }
+                                                  },
+                                                  {
+                                                    "ident": "len"
+                                                  },
+                                                  {
+                                                    "group": {
+                                                      "delimiter": "parenthesis",
+                                                      "stream": []
+                                                    }
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": "=",
+                                                      "spacing": "joint"
+                                                    }
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": "=",
+                                                      "spacing": "alone"
+                                                    }
+                                                  },
+                                                  {
+                                                    "lit": "1"
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": "|",
+                                                      "spacing": "joint"
+                                                    }
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": "|",
+                                                      "spacing": "alone"
+                                                    }
+                                                  },
+                                                  {
+                                                    "ident": "node"
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": ".",
+                                                      "spacing": "alone"
+                                                    }
+                                                  },
+                                                  {
+                                                    "ident": "ident"
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": "=",
+                                                      "spacing": "joint"
+                                                    }
+                                                  },
+                                                  {
+                                                    "punct": {
+                                                      "op": "=",
+                                                      "spacing": "alone"
+                                                    }
+                                                  },
+                                                  {
+                                                    "lit": "\"Stmt\""
+                                                  }
+                                                ],
+                                                "semi_token": true
+                                              }
+                                            },
+                                            {
+                                              "expr": [
+                                                {
+                                                  "match": {
+                                                    "expr": {
+                                                      "reference": {
+                                                        "expr": {
+                                                          "index": {
+                                                            "expr": {
+                                                              "path": {
+                                                                "segments": [
+                                                                  {
+                                                                    "ident": "fields"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            },
+                                                            "index": {
+                                                              "lit": {
+                                                                "int": "0"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "arms": [
+                                                      {
+                                                        "pat": {
+                                                          "tuple_struct": {
+                                                            "path": {
+                                                              "segments": [
+                                                                {
+                                                                  "ident": "Type"
+                                                                },
+                                                                {
+                                                                  "ident": "Syn"
+                                                                }
+                                                              ]
+                                                            },
+                                                            "elems": [
+                                                              {
+                                                                "ident": {
+                                                                  "ident": "s"
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        },
+                                                        "guard": {
+                                                          "method_call": {
+                                                            "receiver": {
+                                                              "path": {
+                                                                "segments": [
+                                                                  {
+                                                                    "ident": "EMPTY_STRUCTS"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            },
+                                                            "method": "contains",
+                                                            "args": [
+                                                              {
+                                                                "reference": {
+                                                                  "expr": {
+                                                                    "reference": {
+                                                                      "expr": {
+                                                                        "unary": {
+                                                                          "op": "*",
+                                                                          "expr": {
+                                                                            "unary": {
+                                                                              "op": "*",
+                                                                              "expr": {
+                                                                                "path": {
+                                                                                  "segments": [
+                                                                                    {
+                                                                                      "ident": "s"
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        },
+                                                        "body": {
+                                                          "block": {
+                                                            "stmts": [
+                                                              {
+                                                                "expr": [
+                                                                  {
+                                                                    "method_call": {
+                                                                      "receiver": {
+                                                                        "path": {
+                                                                          "segments": [
+                                                                            {
+                                                                              "ident": "body"
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      },
+                                                                      "method": "extend",
+                                                                      "args": [
+                                                                        {
+                                                                          "macro": {
+                                                                            "path": {
+                                                                              "segments": [
+                                                                                {
+                                                                                  "ident": "quote"
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            "delimiter": "paren",
+                                                                            "tokens": [
+                                                                              {
+                                                                                "punct": {
+                                                                                  "op": "#",
+                                                                                  "spacing": "alone"
+                                                                                }
+                                                                              },
+                                                                              {
+                                                                                "ident": "variant"
+                                                                              },
+                                                                              {
+                                                                                "punct": {
+                                                                                  "op": ",",
+                                                                                  "spacing": "alone"
+                                                                                }
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  },
+                                                                  true
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "pat": {
+                                                          "or": {
+                                                            "cases": [
+                                                              {
+                                                                "tuple_struct": {
+                                                                  "path": {
+                                                                    "segments": [
+                                                                      {
+                                                                        "ident": "Type"
+                                                                      },
+                                                                      {
+                                                                        "ident": "Syn"
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  "elems": [
+                                                                    {
+                                                                      "ident": {
+                                                                        "ident": "s"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              {
+                                                                "tuple_struct": {
+                                                                  "path": {
+                                                                    "segments": [
+                                                                      {
+                                                                        "ident": "Type"
+                                                                      },
+                                                                      {
+                                                                        "ident": "Ext"
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  "elems": [
+                                                                    {
+                                                                      "ident": {
+                                                                        "ident": "s"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        },
+                                                        "body": {
+                                                          "block": {
+                                                            "stmts": [
+                                                              {
+                                                                "let": {
+                                                                  "pat": {
+                                                                    "ident": {
+                                                                      "ident": "ty"
+                                                                    }
+                                                                  },
+                                                                  "init": {
+                                                                    "expr": {
+                                                                      "macro": {
+                                                                        "path": {
+                                                                          "segments": [
+                                                                            {
+                                                                              "ident": "format_ident"
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        "delimiter": "paren",
+                                                                        "tokens": [
+                                                                          {
+                                                                            "lit": "\"{s}\""
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              {
+                                                                "expr": [
+                                                                  {
+                                                                    "method_call": {
+                                                                      "receiver": {
+                                                                        "path": {
+                                                                          "segments": [
+                                                                            {
+                                                                              "ident": "body"
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      },
+                                                                      "method": "extend",
+                                                                      "args": [
+                                                                        {
+                                                                          "macro": {
+                                                                            "path": {
+                                                                              "segments": [
+                                                                                {
+                                                                                  "ident": "quote"
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            "delimiter": "paren",
+                                                                            "tokens": [
+                                                                              {
+                                                                                "punct": {
+                                                                                  "op": "#",
+                                                                                  "spacing": "alone"
+                                                                                }
+                                                                              },
+                                                                              {
+                                                                                "ident": "variant"
+                                                                              },
+                                                                              {
+                                                                                "group": {
+                                                                                  "delimiter": "parenthesis",
+                                                                                  "stream": [
+                                                                                    {
+                                                                                      "punct": {
+                                                                                        "op": "#",
+                                                                                        "spacing": "alone"
+                                                                                      }
+                                                                                    },
+                                                                                    {
+                                                                                      "ident": "ty"
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              },
+                                                                              {
+                                                                                "punct": {
+                                                                                  "op": ",",
+                                                                                  "spacing": "alone"
+                                                                                }
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  },
+                                                                  true
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "pat": {
+                                                          "or": {
+                                                            "cases": [
+                                                              {
+                                                                "tuple_struct": {
+                                                                  "path": {
+                                                                    "segments": [
+                                                                      {
+                                                                        "ident": "Type"
+                                                                      },
+                                                                      {
+                                                                        "ident": "Token"
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  "elems": [
+                                                                    {
+                                                                      "ident": {
+                                                                        "ident": "t"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              {
+                                                                "tuple_struct": {
+                                                                  "path": {
+                                                                    "segments": [
+                                                                      {
+                                                                        "ident": "Type"
+                                                                      },
+                                                                      {
+                                                                        "ident": "Group"
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  "elems": [
+                                                                    {
+                                                                      "ident": {
+                                                                        "ident": "t"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        },
+                                                        "body": {
+                                                          "block": {
+                                                            "stmts": [
+                                                              {
+                                                                "expr": [
+                                                                  {
+                                                                    "if": {
+                                                                      "cond": {
+                                                                        "macro": {
+                                                                          "path": {
+                                                                            "segments": [
+                                                                              {
+                                                                                "ident": "matches"
+                                                                              }
+                                                                            ]
+                                                                          },
+                                                                          "delimiter": "paren",
+                                                                          "tokens": [
+                                                                            {
+                                                                              "punct": {
+                                                                                "op": "&",
+                                                                                "spacing": "joint"
+                                                                              }
+                                                                            },
+                                                                            {
+                                                                              "punct": {
+                                                                                "op": "*",
+                                                                                "spacing": "alone"
+                                                                              }
+                                                                            },
+                                                                            {
+                                                                              "ident": "node"
+                                                                            },
+                                                                            {
+                                                                              "punct": {
+                                                                                "op": ".",
+                                                                                "spacing": "alone"
+                                                                              }
+                                                                            },
+                                                                            {
+                                                                              "ident": "ident"
+                                                                            },
+                                                                            {
+                                                                              "punct": {
+                                                                                "op": ",",
+                                                                                "spacing": "alone"
+                                                                              }
+                                                                            },
+                                                                            {
+                                                                              "lit": "\"BinOp\""
+                                                                            },
+                                                                            {
+                                                                              "punct": {
+                                                                                "op": "|",
+                                                                                "spacing": "alone"
+                                                                              }
+                                                                            },
+                                                                            {
+                                                                              "lit": "\"UnOp\""
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      },
+                                                                      "then_branch": [
+                                                                        {
+                                                                          "let": {
+                                                                            "pat": {
+                                                                              "ident": {
+                                                                                "ident": "s"
+                                                                              }
+                                                                            },
+                                                                            "init": {
+                                                                              "expr": {
+                                                                                "reference": {
+                                                                                  "expr": {
+                                                                                    "index": {
+                                                                                      "expr": {
+                                                                                        "field": {
+                                                                                          "base": {
+                                                                                            "path": {
+                                                                                              "segments": [
+                                                                                                {
+                                                                                                  "ident": "defs"
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          },
+                                                                                          "ident": "tokens"
+                                                                                        }
+                                                                                      },
+                                                                                      "index": {
+                                                                                        "path": {
+                                                                                          "segments": [
+                                                                                            {
+                                                                                              "ident": "t"
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        {
+                                                                          "expr": [
+                                                                            {
+                                                                              "method_call": {
+                                                                                "receiver": {
+                                                                                  "path": {
+                                                                                    "segments": [
+                                                                                      {
+                                                                                        "ident": "body"
+                                                                                      }
+                                                                                    ]
+                                                                                  }
+                                                                                },
+                                                                                "method": "extend",
+                                                                                "args": [
+                                                                                  {
+                                                                                    "macro": {
+                                                                                      "path": {
+                                                                                        "segments": [
+                                                                                          {
+                                                                                            "ident": "quote"
+                                                                                          }
+                                                                                        ]
+                                                                                      },
+                                                                                      "delimiter": "paren",
+                                                                                      "tokens": [
+                                                                                        {
+                                                                                          "punct": {
+                                                                                            "op": "#",
+                                                                                            "spacing": "alone"
+                                                                                          }
+                                                                                        },
+                                                                                        {
+                                                                                          "group": {
+                                                                                            "delimiter": "bracket",
+                                                                                            "stream": [
+                                                                                              {
+                                                                                                "ident": "serde"
+                                                                                              },
+                                                                                              {
+                                                                                                "group": {
+                                                                                                  "delimiter": "parenthesis",
+                                                                                                  "stream": [
+                                                                                                    {
+                                                                                                      "ident": "rename"
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "punct": {
+                                                                                                        "op": "=",
+                                                                                                        "spacing": "alone"
+                                                                                                      }
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "punct": {
+                                                                                                        "op": "#",
+                                                                                                        "spacing": "alone"
+                                                                                                      }
+                                                                                                    },
+                                                                                                    {
+                                                                                                      "ident": "s"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              }
+                                                                                            ]
+                                                                                          }
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  }
+                                                                                ]
+                                                                              }
+                                                                            },
+                                                                            true
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  },
+                                                                  false
+                                                                ]
+                                                              },
+                                                              {
+                                                                "expr": [
+                                                                  {
+                                                                    "method_call": {
+                                                                      "receiver": {
+                                                                        "path": {
+                                                                          "segments": [
+                                                                            {
+                                                                              "ident": "body"
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      },
+                                                                      "method": "extend",
+                                                                      "args": [
+                                                                        {
+                                                                          "macro": {
+                                                                            "path": {
+                                                                              "segments": [
+                                                                                {
+                                                                                  "ident": "quote"
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            "delimiter": "paren",
+                                                                            "tokens": [
+                                                                              {
+                                                                                "punct": {
+                                                                                  "op": "#",
+                                                                                  "spacing": "alone"
+                                                                                }
+                                                                              },
+                                                                              {
+                                                                                "ident": "variant"
+                                                                              },
+                                                                              {
+                                                                                "punct": {
+                                                                                  "op": ",",
+                                                                                  "spacing": "alone"
+                                                                                }
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  },
+                                                                  true
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "pat": {
+                                                          "_": {}
+                                                        },
+                                                        "body": {
+                                                          "macro": {
+                                                            "path": {
+                                                              "segments": [
+                                                                {
+                                                                  "ident": "unreachable"
+                                                                }
+                                                              ]
+                                                            },
+                                                            "delimiter": "paren",
+                                                            "tokens": [
+                                                              {
+                                                                "lit": "\"Data::Enum: {}\""
+                                                              },
+                                                              {
+                                                                "punct": {
+                                                                  "op": ",",
+                                                                  "spacing": "alone"
+                                                                }
+                                                              },
+                                                              {
+                                                                "ident": "node"
+                                                              },
+                                                              {
+                                                                "punct": {
+                                                                  "op": ".",
+                                                                  "spacing": "alone"
+                                                                }
+                                                              },
+                                                              {
+                                                                "ident": "ident"
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                false
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  false
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        false
+                      ]
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "non_exhaustive"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "if": {
+                              "cond": {
+                                "field": {
+                                  "base": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "node"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "ident": "exhaustive"
+                                }
+                              },
+                              "then_branch": [
+                                {
+                                  "macro": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "quote"
+                                        }
+                                      ]
+                                    },
+                                    "delimiter": "brace",
+                                    "tokens": []
+                                  }
+                                }
+                              ],
+                              "else_branch": {
+                                "block": {
+                                  "stmts": [
+                                    {
+                                      "macro": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "quote"
+                                            }
+                                          ]
+                                        },
+                                        "delimiter": "brace",
+                                        "tokens": [
+                                          {
+                                            "punct": {
+                                              "op": "#",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "group": {
+                                              "delimiter": "bracket",
+                                              "stream": [
+                                                {
+                                                  "ident": "non_exhaustive"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "ident"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "macro": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "format_ident"
+                                  }
+                                ]
+                              },
+                              "delimiter": "paren",
+                              "tokens": [
+                                {
+                                  "lit": "\"{}\""
+                                },
+                                {
+                                  "punct": {
+                                    "op": ",",
+                                    "spacing": "alone"
+                                  }
+                                },
+                                {
+                                  "ident": "node"
+                                },
+                                {
+                                  "punct": {
+                                    "op": ".",
+                                    "spacing": "alone"
+                                  }
+                                },
+                                {
+                                  "ident": "ident"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "doc"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "macro": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "format"
+                                  }
+                                ]
+                              },
+                              "delimiter": "paren",
+                              "tokens": [
+                                {
+                                  "lit": "\" An adapter for [`enum@syn::{}`].\""
+                                },
+                                {
+                                  "punct": {
+                                    "op": ",",
+                                    "spacing": "alone"
+                                  }
+                                },
+                                {
+                                  "ident": "node"
+                                },
+                                {
+                                  "punct": {
+                                    "op": ".",
+                                    "spacing": "alone"
+                                  }
+                                },
+                                {
+                                  "ident": "ident"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "expr": [
+                        {
+                          "method_call": {
+                            "receiver": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "impls"
+                                  }
+                                ]
+                              }
+                            },
+                            "method": "extend",
+                            "args": [
+                              {
+                                "macro": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "quote"
+                                      }
+                                    ]
+                                  },
+                                  "delimiter": "brace",
+                                  "tokens": [
+                                    {
+                                      "punct": {
+                                        "op": "#",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "group": {
+                                        "delimiter": "bracket",
+                                        "stream": [
+                                          {
+                                            "ident": "doc"
+                                          },
+                                          {
+                                            "punct": {
+                                              "op": "=",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "punct": {
+                                              "op": "#",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "ident": "doc"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "punct": {
+                                        "op": "#",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "group": {
+                                        "delimiter": "bracket",
+                                        "stream": [
+                                          {
+                                            "ident": "derive"
+                                          },
+                                          {
+                                            "group": {
+                                              "delimiter": "parenthesis",
+                                              "stream": [
+                                                {
+                                                  "ident": "Serialize"
+                                                },
+                                                {
+                                                  "punct": {
+                                                    "op": ",",
+                                                    "spacing": "alone"
+                                                  }
+                                                },
+                                                {
+                                                  "ident": "Deserialize"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "punct": {
+                                        "op": "#",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "group": {
+                                        "delimiter": "bracket",
+                                        "stream": [
+                                          {
+                                            "ident": "serde"
+                                          },
+                                          {
+                                            "group": {
+                                              "delimiter": "parenthesis",
+                                              "stream": [
+                                                {
+                                                  "ident": "rename_all"
+                                                },
+                                                {
+                                                  "punct": {
+                                                    "op": "=",
+                                                    "spacing": "alone"
+                                                  }
+                                                },
+                                                {
+                                                  "lit": "\"snake_case\""
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "punct": {
+                                        "op": "#",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "ident": "non_exhaustive"
+                                    },
+                                    {
+                                      "ident": "pub"
+                                    },
+                                    {
+                                      "ident": "enum"
+                                    },
+                                    {
+                                      "punct": {
+                                        "op": "#",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "ident": "ident"
+                                    },
+                                    {
+                                      "group": {
+                                        "delimiter": "brace",
+                                        "stream": [
+                                          {
+                                            "punct": {
+                                              "op": "#",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "ident": "body"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        true
+                      ]
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "vis": {
+          "restricted": {
+            "path": {
+              "segments": [
+                {
+                  "ident": "crate"
+                }
+              ]
+            }
+          }
+        },
+        "ident": "generate",
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "defs"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Definitions"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "impls"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "traverse"
+                          },
+                          {
+                            "ident": "traverse"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "defs"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "node"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "path"
+                }
+              },
+              "init": {
+                "expr": {
+                  "reference": {
+                    "expr": {
+                      "method_call": {
+                        "receiver": {
+                          "call": {
+                            "func": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "file"
+                                  },
+                                  {
+                                    "ident": "workspace_root"
+                                  }
+                                ]
+                              }
+                            },
+                            "args": []
+                          }
+                        },
+                        "method": "join",
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "AST_ENUM_SRC"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "method_call": {
+                  "receiver": {
+                    "call": {
+                      "func": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "file"
+                            },
+                            {
+                              "ident": "write"
+                            }
+                          ]
+                        }
+                      },
+                      "args": [
+                        {
+                          "macro": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "function_name"
+                                }
+                              ]
+                            },
+                            "delimiter": "paren",
+                            "tokens": []
+                          }
+                        },
+                        {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "path"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "macro": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "quote"
+                                }
+                              ]
+                            },
+                            "delimiter": "brace",
+                            "tokens": [
+                              {
+                                "ident": "use"
+                              },
+                              {
+                                "ident": "crate"
+                              },
+                              {
+                                "punct": {
+                                  "op": ":",
+                                  "spacing": "joint"
+                                }
+                              },
+                              {
+                                "punct": {
+                                  "op": ":",
+                                  "spacing": "joint"
+                                }
+                              },
+                              {
+                                "punct": {
+                                  "op": "*",
+                                  "spacing": "joint"
+                                }
+                              },
+                              {
+                                "punct": {
+                                  "op": ";",
+                                  "spacing": "alone"
+                                }
+                              },
+                              {
+                                "punct": {
+                                  "op": "#",
+                                  "spacing": "alone"
+                                }
+                              },
+                              {
+                                "ident": "impls"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "method": "unwrap",
+                  "args": []
+                }
+              },
+              true
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

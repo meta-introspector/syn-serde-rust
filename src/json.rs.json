@@ -1,0 +1,4151 @@
+{
+  "attrs": [
+    {
+      "style": "inner",
+      "meta": {
+        "name_value": {
+          "path": {
+            "segments": [
+              {
+                "ident": "doc"
+              }
+            ]
+          },
+          "value": {
+            "lit": {
+              "str": "\" A module to provide functions for JSON <-> Rust serialize and deserialize.\""
+            }
+          }
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "std",
+            "tree": {
+              "ident": "io"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "serde_json",
+            "tree": {
+              "ident": "Result"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "super",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Serialize the given [`Syn`] type as JSON into the I/O stream.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # use std::io;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn to_writer<W>(writer: W, syn_file: &syn::File) -> serde_json::Result<()>\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # where\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" #     W: io::Write,\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter = syn_file.to_adapter();\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" serde_json::to_writer(writer, &adapter)\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "to_writer",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            },
+            {
+              "type": {
+                "ident": "W"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "W"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "io"
+                          },
+                          {
+                            "ident": "Write"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "writer"
+                }
+              },
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "W"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "syn"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Result",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "tuple": {
+                            "elems": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "adapter"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "syn"
+                          }
+                        ]
+                      }
+                    },
+                    "method": "to_adapter",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde_json"
+                        },
+                        {
+                          "ident": "to_writer"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "writer"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "adapter"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Serialize the given [`Syn`] type as pretty-printed JSON into the IO\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" stream.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # use std::io;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn to_writer_pretty<W: io::Write>(writer: W, syn_file: &syn::File) -> serde_json::Result<()> {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter = syn_file.to_adapter();\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" serde_json::to_writer_pretty(writer, &adapter)\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "to_writer_pretty",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            },
+            {
+              "type": {
+                "ident": "W"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "W"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "io"
+                          },
+                          {
+                            "ident": "Write"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "writer"
+                }
+              },
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "W"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "syn"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Result",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "tuple": {
+                            "elems": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "adapter"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "syn"
+                          }
+                        ]
+                      }
+                    },
+                    "method": "to_adapter",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "serde_json"
+                        },
+                        {
+                          "ident": "to_writer_pretty"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "writer"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "adapter"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Serialize the given [`Syn`] type as a JSON byte vector.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn to_vec(syn_file: &syn::File) -> Vec<u8> {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter = syn_file.to_adapter();\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" serde_json::to_vec(&adapter).unwrap()\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "allow"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "clippy"
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "joint"
+                    }
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "missing_panics_doc"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "to_vec",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "syn"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Vec",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "u8"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "adapter"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "syn"
+                          }
+                        ]
+                      }
+                    },
+                    "method": "to_adapter",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "method_call": {
+                  "receiver": {
+                    "call": {
+                      "func": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "serde_json"
+                            },
+                            {
+                              "ident": "to_vec"
+                            }
+                          ]
+                        }
+                      },
+                      "args": [
+                        {
+                          "reference": {
+                            "expr": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "adapter"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "method": "unwrap",
+                  "args": []
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Serialize the given [`Syn`] type as a pretty-printed JSON byte vector.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn to_vec_pretty(syn_file: &syn::File) -> Vec<u8> {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter = syn_file.to_adapter();\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" serde_json::to_vec_pretty(&adapter).unwrap()\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "allow"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "clippy"
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "joint"
+                    }
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "missing_panics_doc"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "to_vec_pretty",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "syn"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Vec",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "u8"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "adapter"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "syn"
+                          }
+                        ]
+                      }
+                    },
+                    "method": "to_adapter",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "method_call": {
+                  "receiver": {
+                    "call": {
+                      "func": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "serde_json"
+                            },
+                            {
+                              "ident": "to_vec_pretty"
+                            }
+                          ]
+                        }
+                      },
+                      "args": [
+                        {
+                          "reference": {
+                            "expr": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "adapter"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "method": "unwrap",
+                  "args": []
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Serialize the given [`Syn`] type as a String of JSON.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn to_string(syn_file: &syn::File) -> String {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter = syn_file.to_adapter();\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" serde_json::to_string(&adapter).unwrap()\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "allow"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "clippy"
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "joint"
+                    }
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "missing_panics_doc"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "to_string",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "syn"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "String"
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "adapter"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "syn"
+                          }
+                        ]
+                      }
+                    },
+                    "method": "to_adapter",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "method_call": {
+                  "receiver": {
+                    "call": {
+                      "func": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "serde_json"
+                            },
+                            {
+                              "ident": "to_string"
+                            }
+                          ]
+                        }
+                      },
+                      "args": [
+                        {
+                          "reference": {
+                            "expr": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "adapter"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "method": "unwrap",
+                  "args": []
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Serialize the given [`Syn`] type as a pretty-printed String of JSON.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn to_string_pretty(syn_file: &syn::File) -> String {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter = syn_file.to_adapter();\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" serde_json::to_string_pretty(&adapter).unwrap()\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "allow"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "clippy"
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "joint"
+                    }
+                  },
+                  {
+                    "punct": {
+                      "op": ":",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "missing_panics_doc"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "to_string_pretty",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "syn"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "String"
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "adapter"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "syn"
+                          }
+                        ]
+                      }
+                    },
+                    "method": "to_adapter",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "method_call": {
+                  "receiver": {
+                    "call": {
+                      "func": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "serde_json"
+                            },
+                            {
+                              "ident": "to_string_pretty"
+                            }
+                          ]
+                        }
+                      },
+                      "args": [
+                        {
+                          "reference": {
+                            "expr": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "adapter"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "method": "unwrap",
+                  "args": []
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Deserialize an instance of [`Syn`] type from an I/O stream of JSON.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # use std::io;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn from_reader<R: io::Read>(reader: R) -> serde_json::Result<syn::File> {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter: <syn::File as Syn>::Adapter = serde_json::from_reader(reader)?;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let syn_file = syn::File::from_adapter(&adapter);\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Ok(syn_file)\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "from_reader",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            },
+            {
+              "type": {
+                "ident": "R"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "R"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "io"
+                          },
+                          {
+                            "ident": "Read"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "reader"
+                }
+              },
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "R"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Result",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "S"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "adapter"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        },
+                        {
+                          "ident": "Adapter"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "try": {
+                    "expr": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_reader"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "reader"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Ok"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "S"
+                              },
+                              {
+                                "ident": "from_adapter"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "reference": {
+                              "expr": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "adapter"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Deserialize an instance of [`Syn`] type from bytes of JSON text.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn from_reader(v: &[u8]) -> serde_json::Result<syn::File> {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter: <syn::File as Syn>::Adapter = serde_json::from_slice(v)?;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let syn_file = syn::File::from_adapter(&adapter);\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Ok(syn_file)\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "from_slice",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "v"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "slice": {
+                      "elem": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "u8"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Result",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "S"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "adapter"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        },
+                        {
+                          "ident": "Adapter"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "try": {
+                    "expr": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_slice"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "v"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Ok"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "S"
+                              },
+                              {
+                                "ident": "from_adapter"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "reference": {
+                              "expr": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "adapter"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Deserialize an instance of [`Syn`] type from a string of JSON text.\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" This function is equivalent to the following code:\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # fn from_str(s: &str) -> serde_json::Result<syn::File> {\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" use syn_serde::Syn;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let adapter: <syn::File as Syn>::Adapter = serde_json::from_str(s)?;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" let syn_file = syn::File::from_adapter(&adapter);\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" Ok(syn_file)\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" # }\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" ```\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "from_str",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "S"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "S"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Syn"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "s"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "str"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Result",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "S"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "adapter"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "S"
+                        },
+                        {
+                          "ident": "Adapter"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "try": {
+                    "expr": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "s"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Ok"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "S"
+                              },
+                              {
+                                "ident": "from_adapter"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "reference": {
+                              "expr": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "adapter"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,3994 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "super",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "ast_enum",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "FnArg"
+                        },
+                        {
+                          "ident": "ForeignItem"
+                        },
+                        {
+                          "ident": "ImplItem"
+                        },
+                        {
+                          "ident": "ImplRestriction"
+                        },
+                        {
+                          "ident": "Item"
+                        },
+                        {
+                          "ident": "StaticMutability"
+                        },
+                        {
+                          "ident": "TraitItem"
+                        },
+                        {
+                          "ident": "UseTree"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "ast_struct",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "ForeignItemFn"
+                        },
+                        {
+                          "ident": "ForeignItemMacro"
+                        },
+                        {
+                          "ident": "ForeignItemStatic"
+                        },
+                        {
+                          "ident": "ForeignItemType"
+                        },
+                        {
+                          "ident": "ImplItemConst"
+                        },
+                        {
+                          "ident": "ImplItemFn"
+                        },
+                        {
+                          "ident": "ImplItemMacro"
+                        },
+                        {
+                          "ident": "ImplItemType"
+                        },
+                        {
+                          "ident": "ItemConst"
+                        },
+                        {
+                          "ident": "ItemEnum"
+                        },
+                        {
+                          "ident": "ItemExternCrate"
+                        },
+                        {
+                          "ident": "ItemFn"
+                        },
+                        {
+                          "ident": "ItemForeignMod"
+                        },
+                        {
+                          "ident": "ItemImpl"
+                        },
+                        {
+                          "ident": "ItemMacro"
+                        },
+                        {
+                          "ident": "ItemStatic"
+                        },
+                        {
+                          "ident": "ItemTrait"
+                        },
+                        {
+                          "ident": "ItemTraitAlias"
+                        },
+                        {
+                          "ident": "ItemType"
+                        },
+                        {
+                          "ident": "ItemUnion"
+                        },
+                        {
+                          "ident": "ItemUse"
+                        },
+                        {
+                          "ident": "Signature"
+                        },
+                        {
+                          "ident": "TraitItemConst"
+                        },
+                        {
+                          "ident": "TraitItemMacro"
+                        },
+                        {
+                          "ident": "TraitItemType"
+                        },
+                        {
+                          "ident": "UseGroup"
+                        },
+                        {
+                          "ident": "UseName"
+                        },
+                        {
+                          "ident": "UsePath"
+                        },
+                        {
+                          "ident": "UseRename"
+                        },
+                        {
+                          "ident": "Variadic"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_struct"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`struct@syn::ItemMod`].\""
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "struct"
+          },
+          {
+            "ident": "ItemMod"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Vec::is_empty\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "attrs"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Vec"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Attribute"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Visibility::is_inherited\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "vis"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Visibility"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "rename"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"unsafe\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"not\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "unsafety"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "bool"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "ident"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Ident"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Option::is_none\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "content"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Option"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Vec"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Item"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"not\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "semi"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "bool"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_struct"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`struct@syn::ItemStruct`].\""
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "struct"
+          },
+          {
+            "ident": "ItemStruct"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Vec::is_empty\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "attrs"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Vec"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Attribute"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Visibility::is_inherited\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "vis"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Visibility"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "ident"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Ident"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Generics::is_none\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "generics"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Generics"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "fields"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Fields"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_struct"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`struct@syn::TraitItemFn`].\""
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "struct"
+          },
+          {
+            "ident": "TraitItemFn"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Vec::is_empty\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "attrs"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Vec"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Attribute"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "flatten"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "sig"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Signature"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Option::is_none\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "default"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Option"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Block"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_struct"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`struct@syn::Receiver`].\""
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "struct"
+          },
+          {
+            "ident": "Receiver"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Vec::is_empty\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "attrs"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Vec"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Attribute"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "rename"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"ref\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"not\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "reference"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "bool"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Option::is_none\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "lifetime"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Option"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Lifetime"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "rename"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"mut\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"not\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "mutability"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "bool"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"not\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "colon_token"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "bool"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "ty"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Box"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Type"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "StaticMutability"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "vis": {
+                "restricted": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                }
+              },
+              "ident": "is_none",
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "ty": {
+                      "reference": {
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "bool"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "macro": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "matches"
+                            }
+                          ]
+                        },
+                        "delimiter": "paren",
+                        "tokens": [
+                          {
+                            "ident": "self"
+                          },
+                          {
+                            "punct": {
+                              "op": ",",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "Self"
+                          },
+                          {
+                            "punct": {
+                              "op": ":",
+                              "spacing": "joint"
+                            }
+                          },
+                          {
+                            "punct": {
+                              "op": ":",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "None"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "Default"
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "StaticMutability"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "ident": "default",
+              "inputs": [],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Self"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          },
+                          {
+                            "ident": "None"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mod": {
+        "ident": "convert",
+        "content": [
+          {
+            "use": {
+              "tree": {
+                "path": {
+                  "ident": "super",
+                  "tree": "*"
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "syn_trait_impl"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "syn"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ItemStruct"
+                }
+              ],
+              "semi_token": true
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "syn"
+                                        },
+                                        {
+                                          "ident": "ItemStruct"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "ItemStruct"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "other"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "syn"
+                                    },
+                                    {
+                                      "ident": "ItemStruct"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "let": {
+                          "pat": {
+                            "type": {
+                              "pat": {
+                                "ident": {
+                                  "ident": "fields"
+                                }
+                              },
+                              "ty": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "Fields"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "init": {
+                            "expr": {
+                              "method_call": {
+                                "receiver": {
+                                  "field": {
+                                    "base": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "other"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "ident": "fields"
+                                  }
+                                },
+                                "method": "ref_into",
+                                "args": []
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "expr": [
+                          {
+                            "call": {
+                              "func": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "assert_struct_semi"
+                                    }
+                                  ]
+                                }
+                              },
+                              "args": [
+                                {
+                                  "reference": {
+                                    "expr": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "fields"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "method_call": {
+                                    "receiver": {
+                                      "field": {
+                                        "base": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "other"
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "ident": "semi_token"
+                                      }
+                                    },
+                                    "method": "is_some",
+                                    "args": []
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          true
+                        ]
+                      },
+                      {
+                        "expr": [
+                          {
+                            "struct": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Self"
+                                  }
+                                ]
+                              },
+                              "fields": [
+                                {
+                                  "ident": "attrs",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "attrs"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "vis",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "vis"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "ident",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "ident"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "generics",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "generics"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "fields",
+                                  "expr": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "fields"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "ItemStruct"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "syn"
+                    },
+                    {
+                      "ident": "ItemStruct"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "other"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "ItemStruct"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "expr": [
+                          {
+                            "struct": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Self"
+                                  }
+                                ]
+                              },
+                              "fields": [
+                                {
+                                  "ident": "attrs",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "attrs"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "vis",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "vis"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "struct_token",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "default"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "ident",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "ident"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "generics",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "generics"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "fields",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "fields"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "semi_token",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "default_or_none"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": [
+                                        {
+                                          "unary": {
+                                            "op": "!",
+                                            "expr": {
+                                              "method_call": {
+                                                "receiver": {
+                                                  "field": {
+                                                    "base": {
+                                                      "path": {
+                                                        "segments": [
+                                                          {
+                                                            "ident": "other"
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "ident": "fields"
+                                                  }
+                                                },
+                                                "method": "is_named",
+                                                "args": []
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "syn_trait_impl"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "syn"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "TraitItemFn"
+                }
+              ],
+              "semi_token": true
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "syn"
+                                        },
+                                        {
+                                          "ident": "TraitItemFn"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "TraitItemFn"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "other"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "syn"
+                                    },
+                                    {
+                                      "ident": "TraitItemFn"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "expr": [
+                          {
+                            "if": {
+                              "cond": {
+                                "method_call": {
+                                  "receiver": {
+                                    "field": {
+                                      "base": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "other"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "ident": "default"
+                                    }
+                                  },
+                                  "method": "is_some",
+                                  "args": []
+                                }
+                              },
+                              "then_branch": [
+                                {
+                                  "macro": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "assert"
+                                        }
+                                      ]
+                                    },
+                                    "delimiter": "paren",
+                                    "tokens": [
+                                      {
+                                        "ident": "other"
+                                      },
+                                      {
+                                        "punct": {
+                                          "op": ".",
+                                          "spacing": "alone"
+                                        }
+                                      },
+                                      {
+                                        "ident": "semi_token"
+                                      },
+                                      {
+                                        "punct": {
+                                          "op": ".",
+                                          "spacing": "alone"
+                                        }
+                                      },
+                                      {
+                                        "ident": "is_none"
+                                      },
+                                      {
+                                        "group": {
+                                          "delimiter": "parenthesis",
+                                          "stream": []
+                                        }
+                                      },
+                                      {
+                                        "punct": {
+                                          "op": ",",
+                                          "spacing": "alone"
+                                        }
+                                      },
+                                      {
+                                        "lit": "\"unexpected token: `;`\""
+                                      }
+                                    ],
+                                    "semi_token": true
+                                  }
+                                }
+                              ],
+                              "else_branch": {
+                                "block": {
+                                  "stmts": [
+                                    {
+                                      "macro": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "assert"
+                                            }
+                                          ]
+                                        },
+                                        "delimiter": "paren",
+                                        "tokens": [
+                                          {
+                                            "ident": "other"
+                                          },
+                                          {
+                                            "punct": {
+                                              "op": ".",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "ident": "semi_token"
+                                          },
+                                          {
+                                            "punct": {
+                                              "op": ".",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "ident": "is_some"
+                                          },
+                                          {
+                                            "group": {
+                                              "delimiter": "parenthesis",
+                                              "stream": []
+                                            }
+                                          },
+                                          {
+                                            "punct": {
+                                              "op": ",",
+                                              "spacing": "alone"
+                                            }
+                                          },
+                                          {
+                                            "lit": "\"expected `;`\""
+                                          }
+                                        ],
+                                        "semi_token": true
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          false
+                        ]
+                      },
+                      {
+                        "expr": [
+                          {
+                            "struct": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Self"
+                                  }
+                                ]
+                              },
+                              "fields": [
+                                {
+                                  "ident": "attrs",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "attrs"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "sig",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "sig"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "default",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "default"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "TraitItemFn"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "syn"
+                    },
+                    {
+                      "ident": "TraitItemFn"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "other"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "TraitItemFn"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "expr": [
+                          {
+                            "struct": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Self"
+                                  }
+                                ]
+                              },
+                              "fields": [
+                                {
+                                  "ident": "attrs",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "attrs"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "sig",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "sig"
+                                        }
+                                      },
+                                      "method": "ref_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "default",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "other"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "default"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "semi_token",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "default_or_none"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": [
+                                        {
+                                          "method_call": {
+                                            "receiver": {
+                                              "field": {
+                                                "base": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "other"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "ident": "default"
+                                              }
+                                            },
+                                            "method": "is_none",
+                                            "args": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "syn_trait_impl"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "syn"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Receiver"
+                }
+              ],
+              "semi_token": true
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "syn"
+                                        },
+                                        {
+                                          "ident": "Receiver"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Receiver"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "node"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "syn"
+                                    },
+                                    {
+                                      "ident": "Receiver"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "expr": [
+                          {
+                            "struct": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Self"
+                                  }
+                                ]
+                              },
+                              "fields": [
+                                {
+                                  "ident": "attrs",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "attrs"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "reference",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "reference"
+                                        }
+                                      },
+                                      "method": "is_some",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "lifetime",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "method_call": {
+                                          "receiver": {
+                                            "field": {
+                                              "base": {
+                                                "path": {
+                                                  "segments": [
+                                                    {
+                                                      "ident": "node"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "ident": "reference"
+                                            }
+                                          },
+                                          "method": "as_ref",
+                                          "args": []
+                                        }
+                                      },
+                                      "method": "and_then",
+                                      "args": [
+                                        {
+                                          "closure": {
+                                            "inputs": [
+                                              {
+                                                "tuple": {
+                                                  "elems": [
+                                                    {
+                                                      "ident": {
+                                                        "ident": "_0"
+                                                      }
+                                                    },
+                                                    {
+                                                      "ident": {
+                                                        "ident": "_1"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ],
+                                            "output": null,
+                                            "body": {
+                                              "method_call": {
+                                                "receiver": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "_1"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "method": "map_into",
+                                                "args": []
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "mutability",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "mutability"
+                                        }
+                                      },
+                                      "method": "is_some",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "colon_token",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "colon_token"
+                                        }
+                                      },
+                                      "method": "is_some",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "ty",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "ty"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "Receiver"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "syn"
+                    },
+                    {
+                      "ident": "Receiver"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "node"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "Receiver"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "expr": [
+                          {
+                            "struct": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Self"
+                                  }
+                                ]
+                              },
+                              "fields": [
+                                {
+                                  "ident": "attrs",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "attrs"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "reference",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "if": {
+                                      "cond": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "reference"
+                                        }
+                                      },
+                                      "then_branch": [
+                                        {
+                                          "expr": [
+                                            {
+                                              "call": {
+                                                "func": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "Some"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "args": [
+                                                  {
+                                                    "tuple": {
+                                                      "elems": [
+                                                        {
+                                                          "call": {
+                                                            "func": {
+                                                              "path": {
+                                                                "segments": [
+                                                                  {
+                                                                    "ident": "default"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            },
+                                                            "args": []
+                                                          }
+                                                        },
+                                                        {
+                                                          "method_call": {
+                                                            "receiver": {
+                                                              "field": {
+                                                                "base": {
+                                                                  "path": {
+                                                                    "segments": [
+                                                                      {
+                                                                        "ident": "node"
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                },
+                                                                "ident": "lifetime"
+                                                              }
+                                                            },
+                                                            "method": "map_into",
+                                                            "args": []
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            false
+                                          ]
+                                        }
+                                      ],
+                                      "else_branch": {
+                                        "block": {
+                                          "stmts": [
+                                            {
+                                              "expr": [
+                                                {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "None"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                false
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "mutability",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "default_or_none"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": [
+                                        {
+                                          "field": {
+                                            "base": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "node"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "ident": "mutability"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "self_token",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "default"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": []
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "colon_token",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "default_or_none"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": [
+                                        {
+                                          "field": {
+                                            "base": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "node"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "ident": "colon_token"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "ident": "ty",
+                                  "colon_token": true,
+                                  "expr": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "field": {
+                                          "base": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "node"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "ident": "ty"
+                                        }
+                                      },
+                                      "method": "map_into",
+                                      "args": []
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

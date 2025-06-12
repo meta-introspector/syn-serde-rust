@@ -1,0 +1,5826 @@
+{
+  "attrs": [
+    {
+      "style": "inner",
+      "meta": {
+        "name_value": {
+          "path": {
+            "segments": [
+              {
+                "ident": "doc"
+              }
+            ]
+          },
+          "value": {
+            "lit": {
+              "str": "\"\\n<!-- Note: Document from sync-markdown-to-rustdoc:start through sync-markdown-to-rustdoc:end\\n     is synchronized from README.md. Any changes to that range are not preserved. -->\\n<!-- tidy:sync-markdown-to-rustdoc:start -->\\n\\nLibrary to serialize and deserialize [Syn] syntax trees.\\n\\n## Usage\\n\\nAdd this to your `Cargo.toml`:\\n\\n```toml\\n[dependencies]\\nsyn-serde = \\\"0.3\\\"\\n```\\n\\n## Examples\\n\\n```toml\\n[dependencies]\\nsyn-serde = { version = \\\"0.3\\\", features = [\\\"json\\\"] }\\nsyn = { version = \\\"2\\\", features = [\\\"full\\\"] }\\n```\\n\\n```\\nuse syn_serde::json;\\n\\nlet syn_file: syn::File = syn::parse_quote! {\\n    fn main() {\\n        println!(\\\"Hello, world!\\\");\\n    }\\n};\\n\\nprintln!(\\\"{}\\\", json::to_string_pretty(&syn_file));\\n```\\n\\nThis prints the following JSON:\\n\\n```json\\n{\\n  \\\"items\\\": [\\n    {\\n      \\\"fn\\\": {\\n        \\\"ident\\\": \\\"main\\\",\\n        \\\"inputs\\\": [],\\n        \\\"output\\\": null,\\n        \\\"stmts\\\": [\\n          {\\n            \\\"semi\\\": {\\n              \\\"macro\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"println\\\"\\n                    }\\n                  ]\\n                },\\n                \\\"delimiter\\\": \\\"paren\\\",\\n                \\\"tokens\\\": [\\n                  {\\n                    \\\"lit\\\": \\\"\\\\\\\"Hello, world!\\\\\\\"\\\"\\n                  }\\n                ]\\n              }\\n            }\\n          }\\n        ]\\n      }\\n    }\\n  ]\\n}\\n```\\n\\n### Rust source file -> JSON representation of the syntax tree\\n\\nThe [`rust2json`] example parse a Rust source file into a `syn_serde::File`\\nand print out a JSON representation of the syntax tree.\\n\\n### JSON file -> Rust syntax tree\\n\\nThe [`json2rust`] example parse a JSON file into a `syn_serde::File` and\\nprint out a Rust syntax tree.\\n\\n## Optional features\\n\\n- **`json`** \\u{2014} Provides functions for JSON <-> Rust serializing and\\n  deserializing.\\n\\n## Relationship to Syn\\n\\nsyn-serde is a fork of [Syn], and syn-serde provides a set of data structures\\nsimilar but not identical to [Syn]. All data structures provided by syn-serde\\ncan be converted to the data structures of [Syn] and [proc-macro2].\\n\\nThe data structures of syn-serde 0.3 is compatible with the data structures of\\n[Syn] 2.x.\\n\\n[Syn]: https://github.com/dtolnay/syn\\n[proc-macro2]: https://github.com/alexcrichton/proc-macro2\\n[`rust2json`]: https://github.com/taiki-e/syn-serde/tree/HEAD/examples/rust2json\\n[`json2rust`]: https://github.com/taiki-e/syn-serde/tree/HEAD/examples/json2rust\\n\\n<!-- tidy:sync-markdown-to-rustdoc:end -->\\n\""
+            }
+          }
+        }
+      }
+    },
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "doc"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "test"
+            },
+            {
+              "group": {
+                "delimiter": "parenthesis",
+                "stream": [
+                  {
+                    "ident": "no_crate_inject"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "attr"
+                  },
+                  {
+                    "group": {
+                      "delimiter": "parenthesis",
+                      "stream": [
+                        {
+                          "ident": "deny"
+                        },
+                        {
+                          "group": {
+                            "delimiter": "parenthesis",
+                            "stream": [
+                              {
+                                "ident": "warnings"
+                              },
+                              {
+                                "punct": {
+                                  "op": ",",
+                                  "spacing": "alone"
+                                }
+                              },
+                              {
+                                "ident": "rust_2018_idioms"
+                              },
+                              {
+                                "punct": {
+                                  "op": ",",
+                                  "spacing": "alone"
+                                }
+                              },
+                              {
+                                "ident": "single_use_lifetimes"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "punct": {
+                            "op": ",",
+                            "spacing": "alone"
+                          }
+                        },
+                        {
+                          "ident": "allow"
+                        },
+                        {
+                          "group": {
+                            "delimiter": "parenthesis",
+                            "stream": [
+                              {
+                                "ident": "dead_code"
+                              },
+                              {
+                                "punct": {
+                                  "op": ",",
+                                  "spacing": "alone"
+                                }
+                              },
+                              {
+                                "ident": "unused_variables"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "forbid"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "unsafe_code"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "warn"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "alloc_instead_of_core"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "impl_trait_in_params"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "std_instead_of_core"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "allow"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "enum_glob_use"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "needless_doctest_main"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "used_underscore_binding"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "wildcard_imports"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "cfg_attr"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "docsrs"
+            },
+            {
+              "punct": {
+                "op": ",",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "feature"
+            },
+            {
+              "group": {
+                "delimiter": "parenthesis",
+                "stream": [
+                  {
+                    "ident": "doc_cfg"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "mod": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "macro_use"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "macros",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "path"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"gen/ast_struct.rs\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "ident": "ast_struct",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "path"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"gen/ast_enum.rs\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "ident": "ast_enum",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "path"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"gen/convert.rs\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "ident": "convert",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "ident": "attr",
+        "content": [
+          {
+            "use": {
+              "vis": "pub",
+              "tree": {
+                "path": {
+                  "ident": "crate",
+                  "tree": {
+                    "group": [
+                      {
+                        "path": {
+                          "ident": "ast_enum",
+                          "tree": {
+                            "group": [
+                              {
+                                "ident": "AttrStyle"
+                              },
+                              {
+                                "ident": "Meta"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "path": {
+                          "ident": "ast_struct",
+                          "tree": {
+                            "group": [
+                              {
+                                "ident": "Attribute"
+                              },
+                              {
+                                "ident": "MetaList"
+                              },
+                              {
+                                "ident": "MetaNameValue"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "attr",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "AttrStyle"
+                    },
+                    {
+                      "ident": "Attribute"
+                    },
+                    {
+                      "ident": "Meta"
+                    },
+                    {
+                      "ident": "MetaList"
+                    },
+                    {
+                      "ident": "MetaNameValue"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "data",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "vis": {
+          "restricted": {
+            "path": {
+              "segments": [
+                {
+                  "ident": "crate"
+                }
+              ]
+            }
+          }
+        },
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "data",
+                "tree": {
+                  "ident": "assert_struct_semi"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "data",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Field"
+                    },
+                    {
+                      "ident": "Fields"
+                    },
+                    {
+                      "ident": "FieldsNamed"
+                    },
+                    {
+                      "ident": "FieldsUnnamed"
+                    },
+                    {
+                      "ident": "Variant"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "expr",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "expr",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Arm"
+                    },
+                    {
+                      "ident": "Expr"
+                    },
+                    {
+                      "ident": "ExprArray"
+                    },
+                    {
+                      "ident": "ExprAssign"
+                    },
+                    {
+                      "ident": "ExprAsync"
+                    },
+                    {
+                      "ident": "ExprAwait"
+                    },
+                    {
+                      "ident": "ExprBinary"
+                    },
+                    {
+                      "ident": "ExprBlock"
+                    },
+                    {
+                      "ident": "ExprBreak"
+                    },
+                    {
+                      "ident": "ExprCall"
+                    },
+                    {
+                      "ident": "ExprCast"
+                    },
+                    {
+                      "ident": "ExprClosure"
+                    },
+                    {
+                      "ident": "ExprConst"
+                    },
+                    {
+                      "ident": "ExprContinue"
+                    },
+                    {
+                      "ident": "ExprField"
+                    },
+                    {
+                      "ident": "ExprForLoop"
+                    },
+                    {
+                      "ident": "ExprGroup"
+                    },
+                    {
+                      "ident": "ExprIf"
+                    },
+                    {
+                      "ident": "ExprIndex"
+                    },
+                    {
+                      "ident": "ExprInfer"
+                    },
+                    {
+                      "ident": "ExprLet"
+                    },
+                    {
+                      "ident": "ExprLit"
+                    },
+                    {
+                      "ident": "ExprLoop"
+                    },
+                    {
+                      "ident": "ExprMacro"
+                    },
+                    {
+                      "ident": "ExprMatch"
+                    },
+                    {
+                      "ident": "ExprMethodCall"
+                    },
+                    {
+                      "ident": "ExprParen"
+                    },
+                    {
+                      "ident": "ExprPath"
+                    },
+                    {
+                      "ident": "ExprRange"
+                    },
+                    {
+                      "ident": "ExprReference"
+                    },
+                    {
+                      "ident": "ExprRepeat"
+                    },
+                    {
+                      "ident": "ExprReturn"
+                    },
+                    {
+                      "ident": "ExprStruct"
+                    },
+                    {
+                      "ident": "ExprTry"
+                    },
+                    {
+                      "ident": "ExprTryBlock"
+                    },
+                    {
+                      "ident": "ExprTuple"
+                    },
+                    {
+                      "ident": "ExprUnary"
+                    },
+                    {
+                      "ident": "ExprUnsafe"
+                    },
+                    {
+                      "ident": "ExprWhile"
+                    },
+                    {
+                      "ident": "ExprYield"
+                    },
+                    {
+                      "ident": "FieldValue"
+                    },
+                    {
+                      "ident": "Index"
+                    },
+                    {
+                      "ident": "Label"
+                    },
+                    {
+                      "ident": "Member"
+                    },
+                    {
+                      "ident": "RangeLimits"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "file",
+        "content": [
+          {
+            "use": {
+              "vis": "pub",
+              "tree": {
+                "path": {
+                  "ident": "crate",
+                  "tree": {
+                    "path": {
+                      "ident": "ast_struct",
+                      "tree": {
+                        "ident": "File"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "file",
+                "tree": {
+                  "ident": "File"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "generics",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "generics",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "BoundLifetimes"
+                    },
+                    {
+                      "ident": "ConstParam"
+                    },
+                    {
+                      "ident": "GenericParam"
+                    },
+                    {
+                      "ident": "Generics"
+                    },
+                    {
+                      "ident": "LifetimeParam"
+                    },
+                    {
+                      "ident": "PredicateLifetime"
+                    },
+                    {
+                      "ident": "PredicateType"
+                    },
+                    {
+                      "ident": "TraitBound"
+                    },
+                    {
+                      "ident": "TraitBoundModifier"
+                    },
+                    {
+                      "ident": "TypeParam"
+                    },
+                    {
+                      "ident": "TypeParamBound"
+                    },
+                    {
+                      "ident": "WhereClause"
+                    },
+                    {
+                      "ident": "WherePredicate"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "item",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "item",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "FnArg"
+                    },
+                    {
+                      "ident": "ForeignItem"
+                    },
+                    {
+                      "ident": "ForeignItemFn"
+                    },
+                    {
+                      "ident": "ForeignItemMacro"
+                    },
+                    {
+                      "ident": "ForeignItemStatic"
+                    },
+                    {
+                      "ident": "ForeignItemType"
+                    },
+                    {
+                      "ident": "ImplItem"
+                    },
+                    {
+                      "ident": "ImplItemConst"
+                    },
+                    {
+                      "ident": "ImplItemFn"
+                    },
+                    {
+                      "ident": "ImplItemMacro"
+                    },
+                    {
+                      "ident": "ImplItemType"
+                    },
+                    {
+                      "ident": "ImplRestriction"
+                    },
+                    {
+                      "ident": "Item"
+                    },
+                    {
+                      "ident": "ItemConst"
+                    },
+                    {
+                      "ident": "ItemEnum"
+                    },
+                    {
+                      "ident": "ItemExternCrate"
+                    },
+                    {
+                      "ident": "ItemFn"
+                    },
+                    {
+                      "ident": "ItemForeignMod"
+                    },
+                    {
+                      "ident": "ItemImpl"
+                    },
+                    {
+                      "ident": "ItemMacro"
+                    },
+                    {
+                      "ident": "ItemMod"
+                    },
+                    {
+                      "ident": "ItemStatic"
+                    },
+                    {
+                      "ident": "ItemStruct"
+                    },
+                    {
+                      "ident": "ItemTrait"
+                    },
+                    {
+                      "ident": "ItemTraitAlias"
+                    },
+                    {
+                      "ident": "ItemType"
+                    },
+                    {
+                      "ident": "ItemUnion"
+                    },
+                    {
+                      "ident": "ItemUse"
+                    },
+                    {
+                      "ident": "Receiver"
+                    },
+                    {
+                      "ident": "Signature"
+                    },
+                    {
+                      "ident": "StaticMutability"
+                    },
+                    {
+                      "ident": "TraitItem"
+                    },
+                    {
+                      "ident": "TraitItemConst"
+                    },
+                    {
+                      "ident": "TraitItemFn"
+                    },
+                    {
+                      "ident": "TraitItemMacro"
+                    },
+                    {
+                      "ident": "TraitItemType"
+                    },
+                    {
+                      "ident": "UseGroup"
+                    },
+                    {
+                      "ident": "UseName"
+                    },
+                    {
+                      "ident": "UsePath"
+                    },
+                    {
+                      "ident": "UseRename"
+                    },
+                    {
+                      "ident": "UseTree"
+                    },
+                    {
+                      "ident": "Variadic"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "lifetime",
+        "content": [
+          {
+            "use": {
+              "vis": "pub",
+              "tree": {
+                "path": {
+                  "ident": "crate",
+                  "tree": {
+                    "path": {
+                      "ident": "ast_struct",
+                      "tree": {
+                        "ident": "Lifetime"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "lifetime",
+                "tree": {
+                  "ident": "Lifetime"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "lit",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "lit",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Lit"
+                    },
+                    {
+                      "ident": "LitBool"
+                    },
+                    {
+                      "ident": "LitByte"
+                    },
+                    {
+                      "ident": "LitByteStr"
+                    },
+                    {
+                      "ident": "LitChar"
+                    },
+                    {
+                      "ident": "LitFloat"
+                    },
+                    {
+                      "ident": "LitInt"
+                    },
+                    {
+                      "ident": "LitStr"
+                    },
+                    {
+                      "ident": "StrStyle"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "mac",
+        "content": [
+          {
+            "use": {
+              "vis": "pub",
+              "tree": {
+                "path": {
+                  "ident": "crate",
+                  "tree": {
+                    "group": [
+                      {
+                        "path": {
+                          "ident": "ast_enum",
+                          "tree": {
+                            "ident": "MacroDelimiter"
+                          }
+                        }
+                      },
+                      {
+                        "path": {
+                          "ident": "ast_struct",
+                          "tree": {
+                            "ident": "Macro"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "mac",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Macro"
+                    },
+                    {
+                      "ident": "MacroDelimiter"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "op",
+        "content": [
+          {
+            "use": {
+              "vis": "pub",
+              "tree": {
+                "path": {
+                  "ident": "crate",
+                  "tree": {
+                    "path": {
+                      "ident": "ast_enum",
+                      "tree": {
+                        "group": [
+                          {
+                            "ident": "BinOp"
+                          },
+                          {
+                            "ident": "UnOp"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "op",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "BinOp"
+                    },
+                    {
+                      "ident": "UnOp"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "pat",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "expr",
+                "tree": {
+                  "group": [
+                    {
+                      "rename": {
+                        "ident": "ExprConst",
+                        "rename": "PatConst"
+                      }
+                    },
+                    {
+                      "rename": {
+                        "ident": "ExprLit",
+                        "rename": "PatLit"
+                      }
+                    },
+                    {
+                      "rename": {
+                        "ident": "ExprMacro",
+                        "rename": "PatMacro"
+                      }
+                    },
+                    {
+                      "rename": {
+                        "ident": "ExprPath",
+                        "rename": "PatPath"
+                      }
+                    },
+                    {
+                      "rename": {
+                        "ident": "ExprRange",
+                        "rename": "PatRange"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "pat",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "FieldPat"
+                    },
+                    {
+                      "ident": "Pat"
+                    },
+                    {
+                      "ident": "PatIdent"
+                    },
+                    {
+                      "ident": "PatOr"
+                    },
+                    {
+                      "ident": "PatParen"
+                    },
+                    {
+                      "ident": "PatReference"
+                    },
+                    {
+                      "ident": "PatRest"
+                    },
+                    {
+                      "ident": "PatSlice"
+                    },
+                    {
+                      "ident": "PatStruct"
+                    },
+                    {
+                      "ident": "PatTuple"
+                    },
+                    {
+                      "ident": "PatTupleStruct"
+                    },
+                    {
+                      "ident": "PatType"
+                    },
+                    {
+                      "ident": "PatWild"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "path",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "path",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "AngleBracketedGenericArguments"
+                    },
+                    {
+                      "ident": "AssocConst"
+                    },
+                    {
+                      "ident": "AssocType"
+                    },
+                    {
+                      "ident": "Constraint"
+                    },
+                    {
+                      "ident": "GenericArgument"
+                    },
+                    {
+                      "ident": "ParenthesizedGenericArguments"
+                    },
+                    {
+                      "ident": "Path"
+                    },
+                    {
+                      "ident": "PathArguments"
+                    },
+                    {
+                      "ident": "PathSegment"
+                    },
+                    {
+                      "ident": "QSelf"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "restriction",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "restriction",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "FieldMutability"
+                    },
+                    {
+                      "ident": "VisRestricted"
+                    },
+                    {
+                      "ident": "Visibility"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "stmt",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "stmt",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Block"
+                    },
+                    {
+                      "ident": "Local"
+                    },
+                    {
+                      "ident": "LocalInit"
+                    },
+                    {
+                      "ident": "Stmt"
+                    },
+                    {
+                      "ident": "StmtMacro"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "ty",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "ty",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Abi"
+                    },
+                    {
+                      "ident": "BareFnArg"
+                    },
+                    {
+                      "ident": "BareVariadic"
+                    },
+                    {
+                      "ident": "ReturnType"
+                    },
+                    {
+                      "ident": "Type"
+                    },
+                    {
+                      "ident": "TypeArray"
+                    },
+                    {
+                      "ident": "TypeBareFn"
+                    },
+                    {
+                      "ident": "TypeGroup"
+                    },
+                    {
+                      "ident": "TypeImplTrait"
+                    },
+                    {
+                      "ident": "TypeMacro"
+                    },
+                    {
+                      "ident": "TypeParen"
+                    },
+                    {
+                      "ident": "TypePath"
+                    },
+                    {
+                      "ident": "TypePtr"
+                    },
+                    {
+                      "ident": "TypeReference"
+                    },
+                    {
+                      "ident": "TypeSlice"
+                    },
+                    {
+                      "ident": "TypeTraitObject"
+                    },
+                    {
+                      "ident": "TypeTuple"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "ident": "token_stream",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "hidden"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "token_stream",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Delimiter"
+                    },
+                    {
+                      "ident": "Group"
+                    },
+                    {
+                      "ident": "Ident"
+                    },
+                    {
+                      "ident": "Literal"
+                    },
+                    {
+                      "ident": "Punct"
+                    },
+                    {
+                      "ident": "Spacing"
+                    },
+                    {
+                      "ident": "TokenStream"
+                    },
+                    {
+                      "ident": "TokenTree"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "mod": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "cfg"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "feature"
+                  },
+                  {
+                    "punct": {
+                      "op": "=",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "lit": "\"json\""
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "list": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "cfg_attr"
+                    }
+                  ]
+                },
+                "delimiter": "paren",
+                "tokens": [
+                  {
+                    "ident": "docsrs"
+                  },
+                  {
+                    "punct": {
+                      "op": ",",
+                      "spacing": "alone"
+                    }
+                  },
+                  {
+                    "ident": "doc"
+                  },
+                  {
+                    "group": {
+                      "delimiter": "parenthesis",
+                      "stream": [
+                        {
+                          "ident": "cfg"
+                        },
+                        {
+                          "group": {
+                            "delimiter": "parenthesis",
+                            "stream": [
+                              {
+                                "ident": "feature"
+                              },
+                              {
+                                "punct": {
+                                  "op": "=",
+                                  "spacing": "alone"
+                                }
+                              },
+                              {
+                                "lit": "\"json\""
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "json",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "ident": "sealed",
+        "content": [
+          {
+            "trait": {
+              "attrs": [
+                {
+                  "style": "outer",
+                  "meta": {
+                    "list": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "allow"
+                          }
+                        ]
+                      },
+                      "delimiter": "paren",
+                      "tokens": [
+                        {
+                          "ident": "unknown_lints"
+                        },
+                        {
+                          "punct": {
+                            "op": ",",
+                            "spacing": "alone"
+                          }
+                        },
+                        {
+                          "ident": "unnameable_types"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "vis": "pub",
+              "ident": "Sealed",
+              "items": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "trait": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" A trait for the data structures of [Syn] and [proc-macro2].\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" [Syn]: https://github.com/dtolnay/syn\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "style": "outer",
+            "meta": {
+              "name_value": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "doc"
+                    }
+                  ]
+                },
+                "value": {
+                  "lit": {
+                    "str": "\" [proc-macro2]: https://github.com/alexcrichton/proc-macro2\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "vis": "pub",
+        "ident": "Syn",
+        "colon_token": true,
+        "supertraits": [
+          {
+            "trait": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "Sized"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "trait": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "sealed"
+                  },
+                  {
+                    "ident": "Sealed"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "type": {
+              "ident": "Adapter",
+              "colon_token": true,
+              "bounds": [
+                {
+                  "trait": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Serialize"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "trait": {
+                    "lifetimes": [
+                      {
+                        "lifetime": {
+                          "lifetime": "de",
+                          "bounds": []
+                        }
+                      }
+                    ],
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Deserialize",
+                          "arguments": {
+                            "angle_bracketed": {
+                              "args": [
+                                {
+                                  "lifetime": "de"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "fn": {
+              "attrs": [
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" Converts a `Syn` type into an adapter.\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # Examples\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" ```\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # #[cfg(feature = \\\"json\\\")]\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # fn dox() {\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" use syn_serde::Syn;\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" let syn_file: syn::File = syn::parse_quote! {\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"     fn main() {\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"         println!(\\\"Hello, world!\\\");\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"     }\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" };\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" let serializable_file = syn_file.to_adapter();\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" println!(\\\"{}\\\", serde_json::to_string_pretty(&serializable_file).unwrap());\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # }\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # fn main() {} // rustdoc bug: https://github.com/rust-lang/rust/issues/131893\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" ```\""
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "ident": "to_adapter",
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "ty": {
+                      "reference": {
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Self"
+                    },
+                    {
+                      "ident": "Adapter"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "attrs": [
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" Converts an adapter into a `Syn` type.\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # Examples\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" ```\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # #[cfg(feature = \\\"json\\\")]\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # fn dox() -> Result<(), Box<dyn std::error::Error>> {\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" use syn_serde::Syn;\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" // `struct Unit;`\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" let json = r#\\\"{\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"   \\\"struct\\\": {\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"     \\\"ident\\\": \\\"Unit\\\",\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"     \\\"fields\\\": \\\"unit\\\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"   }\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" }\\\"#;\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\"\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" let serializable_file: <syn::File as Syn>::Adapter = serde_json::from_str(json)?;\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" let syn_file = syn::File::from_adapter(&serializable_file);\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # Ok(())\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" # }\""
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "style": "outer",
+                  "meta": {
+                    "name_value": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "doc"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "lit": {
+                          "str": "\" ```\""
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "ident": "from_adapter",
+              "inputs": [
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "ident": "adapter"
+                      }
+                    },
+                    "ty": {
+                      "reference": {
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              },
+                              {
+                                "ident": "Adapter"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Self"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "core",
+            "tree": {
+              "ident": "ops"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "proc_macro2",
+            "tree": {
+              "ident": "Span"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "serde",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "de",
+                    "tree": {
+                      "ident": "Deserialize"
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "ser",
+                    "tree": {
+                      "ident": "Serialize"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "serde_derive",
+            "tree": {
+              "group": [
+                {
+                  "ident": "Deserialize"
+                },
+                {
+                  "ident": "Serialize"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": {
+        "ident": "Punctuated",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            }
+          ]
+        },
+        "ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Vec",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "ident": "default",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "T"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Default"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "T"
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "T"
+                        },
+                        {
+                          "ident": "default"
+                        }
+                      ]
+                    }
+                  },
+                  "args": []
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "ident": "default_or_none",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "T"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Default"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "x"
+                }
+              },
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "bool"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Option",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "expr": [
+              {
+                "if": {
+                  "cond": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "x"
+                        }
+                      ]
+                    }
+                  },
+                  "then_branch": [
+                    {
+                      "expr": [
+                        {
+                          "call": {
+                            "func": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "Some"
+                                  }
+                                ]
+                              }
+                            },
+                            "args": [
+                              {
+                                "call": {
+                                  "func": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "T"
+                                        },
+                                        {
+                                          "ident": "default"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "args": []
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        false
+                      ]
+                    }
+                  ],
+                  "else_branch": {
+                    "block": {
+                      "stmts": [
+                        {
+                          "expr": [
+                            {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "None"
+                                  }
+                                ]
+                              }
+                            },
+                            false
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "ident": "not",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "T"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "ops"
+                          },
+                          {
+                            "ident": "Not"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "x"
+                }
+              },
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "T"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "T"
+              },
+              {
+                "ident": "Output"
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "expr": [
+              {
+                "unary": {
+                  "op": "!",
+                  "expr": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "x"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "trait": {
+        "ident": "RefInto",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "U"
+              }
+            }
+          ]
+        },
+        "colon_token": true,
+        "supertraits": [
+          {
+            "trait": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "Sized"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "fn": {
+              "ident": "ref_into",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "reference": {
+                          "lifetime": "a",
+                          "elem": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Self"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Into",
+                                  "arguments": {
+                                    "angle_bracketed": {
+                                      "args": [
+                                        {
+                                          "type": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "U"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "U"
+                    }
+                  ]
+                }
+              },
+              "default": [
+                {
+                  "expr": [
+                    {
+                      "method_call": {
+                        "receiver": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "self"
+                              }
+                            ]
+                          }
+                        },
+                        "method": "into",
+                        "args": []
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            },
+            {
+              "type": {
+                "ident": "U"
+              }
+            }
+          ]
+        },
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "RefInto",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "U"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "T"
+              }
+            ]
+          }
+        },
+        "items": []
+      }
+    },
+    {
+      "trait": {
+        "ident": "MapInto",
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "U"
+              }
+            },
+            {
+              "type": {
+                "ident": "M"
+              }
+            }
+          ]
+        },
+        "items": [
+          {
+            "type": {
+              "ident": "T"
+            }
+          },
+          {
+            "fn": {
+              "ident": "ref_map",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  },
+                  {
+                    "type": {
+                      "ident": "F"
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "Self"
+                            },
+                            {
+                              "ident": "T"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "lifetime": "a"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "F"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "FnMut",
+                                  "arguments": {
+                                    "parenthesized": {
+                                      "inputs": [
+                                        {
+                                          "reference": {
+                                            "lifetime": "a",
+                                            "elem": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Self"
+                                                  },
+                                                  {
+                                                    "ident": "T"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "output": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "U"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "ident": "f"
+                      }
+                    },
+                    "ty": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "F"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "M"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "ident": "map_into",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "Self"
+                            },
+                            {
+                              "ident": "T"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "lifetime": "a"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "reference": {
+                          "lifetime": "a",
+                          "elem": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Self"
+                                },
+                                {
+                                  "ident": "T"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Into",
+                                  "arguments": {
+                                    "angle_bracketed": {
+                                      "args": [
+                                        {
+                                          "type": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "U"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "M"
+                    }
+                  ]
+                }
+              },
+              "default": [
+                {
+                  "expr": [
+                    {
+                      "method_call": {
+                        "receiver": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "self"
+                              }
+                            ]
+                          }
+                        },
+                        "method": "ref_map",
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "Into"
+                                },
+                                {
+                                  "ident": "into"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            },
+            {
+              "type": {
+                "ident": "U"
+              }
+            }
+          ]
+        },
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "MapInto",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "U"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Vec",
+                                "arguments": {
+                                  "angle_bracketed": {
+                                    "args": [
+                                      {
+                                        "type": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "U"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Vec",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "type": {
+              "ident": "T",
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "T"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "ident": "ref_map",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  },
+                  {
+                    "type": {
+                      "ident": "F"
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "F"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "FnMut",
+                                  "arguments": {
+                                    "parenthesized": {
+                                      "inputs": [
+                                        {
+                                          "reference": {
+                                            "lifetime": "a",
+                                            "elem": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Self"
+                                                  },
+                                                  {
+                                                    "ident": "T"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "output": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "U"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "ident": "f"
+                      }
+                    },
+                    "ty": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "F"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Vec",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "U"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "method_call": {
+                        "receiver": {
+                          "method_call": {
+                            "receiver": {
+                              "method_call": {
+                                "receiver": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "self"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "method": "iter",
+                                "args": []
+                              }
+                            },
+                            "method": "map",
+                            "args": [
+                              {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "f"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "method": "collect",
+                        "args": []
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            },
+            {
+              "type": {
+                "ident": "U"
+              }
+            },
+            {
+              "type": {
+                "ident": "P"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "P"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Default"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "MapInto",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "U"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "punctuated"
+                              },
+                              {
+                                "ident": "Punctuated",
+                                "arguments": {
+                                  "angle_bracketed": {
+                                    "args": [
+                                      {
+                                        "type": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "U"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "P"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Vec",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "type": {
+              "ident": "T",
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "T"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "ident": "ref_map",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  },
+                  {
+                    "type": {
+                      "ident": "F"
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "F"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "FnMut",
+                                  "arguments": {
+                                    "parenthesized": {
+                                      "inputs": [
+                                        {
+                                          "reference": {
+                                            "lifetime": "a",
+                                            "elem": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Self"
+                                                  },
+                                                  {
+                                                    "ident": "T"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "output": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "U"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "ident": "f"
+                      }
+                    },
+                    "ty": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "F"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "syn"
+                    },
+                    {
+                      "ident": "punctuated"
+                    },
+                    {
+                      "ident": "Punctuated",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "U"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "type": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "P"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "method_call": {
+                        "receiver": {
+                          "method_call": {
+                            "receiver": {
+                              "method_call": {
+                                "receiver": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "self"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "method": "iter",
+                                "args": []
+                              }
+                            },
+                            "method": "map",
+                            "args": [
+                              {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "f"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "method": "collect",
+                        "args": []
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            },
+            {
+              "type": {
+                "ident": "U"
+              }
+            },
+            {
+              "type": {
+                "ident": "P"
+              }
+            }
+          ],
+          "where_clause": [
+            {
+              "type": {
+                "bounded_ty": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "P"
+                      }
+                    ]
+                  }
+                },
+                "bounds": [
+                  {
+                    "trait": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Default"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "MapInto",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "U"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Vec",
+                                "arguments": {
+                                  "angle_bracketed": {
+                                    "args": [
+                                      {
+                                        "type": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "U"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "syn"
+              },
+              {
+                "ident": "punctuated"
+              },
+              {
+                "ident": "Punctuated",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "P"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "type": {
+              "ident": "T",
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "T"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "ident": "ref_map",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  },
+                  {
+                    "type": {
+                      "ident": "F"
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "F"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "FnMut",
+                                  "arguments": {
+                                    "parenthesized": {
+                                      "inputs": [
+                                        {
+                                          "reference": {
+                                            "lifetime": "a",
+                                            "elem": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Self"
+                                                  },
+                                                  {
+                                                    "ident": "T"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "output": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "U"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "ident": "f"
+                      }
+                    },
+                    "ty": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "F"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Vec",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "U"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "method_call": {
+                        "receiver": {
+                          "method_call": {
+                            "receiver": {
+                              "method_call": {
+                                "receiver": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "self"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "method": "iter",
+                                "args": []
+                              }
+                            },
+                            "method": "map",
+                            "args": [
+                              {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "f"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "method": "collect",
+                        "args": []
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            },
+            {
+              "type": {
+                "ident": "U"
+              }
+            }
+          ]
+        },
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "MapInto",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "U"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Option",
+                                "arguments": {
+                                  "angle_bracketed": {
+                                    "args": [
+                                      {
+                                        "type": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "U"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Option",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "type": {
+              "ident": "T",
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "T"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "ident": "ref_map",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  },
+                  {
+                    "type": {
+                      "ident": "F"
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "F"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "FnMut",
+                                  "arguments": {
+                                    "parenthesized": {
+                                      "inputs": [
+                                        {
+                                          "reference": {
+                                            "lifetime": "a",
+                                            "elem": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Self"
+                                                  },
+                                                  {
+                                                    "ident": "T"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "output": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "U"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "ident": "f"
+                      }
+                    },
+                    "ty": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "F"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Option",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "U"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "method_call": {
+                        "receiver": {
+                          "method_call": {
+                            "receiver": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "self"
+                                  }
+                                ]
+                              }
+                            },
+                            "method": "as_ref",
+                            "args": []
+                          }
+                        },
+                        "method": "map",
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "f"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "generics": {
+          "params": [
+            {
+              "type": {
+                "ident": "T"
+              }
+            },
+            {
+              "type": {
+                "ident": "U"
+              }
+            }
+          ]
+        },
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "MapInto",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "U"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Box",
+                                "arguments": {
+                                  "angle_bracketed": {
+                                    "args": [
+                                      {
+                                        "type": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "U"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Box",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "T"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "type": {
+              "ident": "T",
+              "ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "T"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "fn": {
+              "ident": "ref_map",
+              "generics": {
+                "params": [
+                  {
+                    "lifetime": {
+                      "lifetime": "a",
+                      "bounds": []
+                    }
+                  },
+                  {
+                    "type": {
+                      "ident": "F"
+                    }
+                  }
+                ],
+                "where_clause": [
+                  {
+                    "type": {
+                      "bounded_ty": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "F"
+                            }
+                          ]
+                        }
+                      },
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "FnMut",
+                                  "arguments": {
+                                    "parenthesized": {
+                                      "inputs": [
+                                        {
+                                          "reference": {
+                                            "lifetime": "a",
+                                            "elem": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Self"
+                                                  },
+                                                  {
+                                                    "ident": "T"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "output": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "U"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "lifetime": "a",
+                    "ty": {
+                      "reference": {
+                        "lifetime": "a",
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "typed": {
+                    "pat": {
+                      "ident": {
+                        "mut": true,
+                        "ident": "f"
+                      }
+                    },
+                    "ty": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "F"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Box",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "U"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Box"
+                              },
+                              {
+                                "ident": "new"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "call": {
+                              "func": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "f"
+                                    }
+                                  ]
+                                }
+                              },
+                              "args": [
+                                {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "self"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

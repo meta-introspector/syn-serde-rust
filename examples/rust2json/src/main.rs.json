@@ -1,0 +1,1359 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "std",
+            "tree": {
+              "group": [
+                {
+                  "ident": "env"
+                },
+                {
+                  "ident": "fs"
+                },
+                {
+                  "path": {
+                    "ident": "io",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "self"
+                        },
+                        {
+                          "ident": "BufWriter"
+                        },
+                        {
+                          "rename": {
+                            "ident": "Write",
+                            "rename": "_"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "path",
+                    "tree": {
+                      "ident": "Path"
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "time",
+                    "tree": {
+                      "ident": "SystemTime"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "syn_serde",
+            "tree": {
+              "ident": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "walkdir",
+            "tree": {
+              "ident": "WalkDir"
+            }
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "ident": "main",
+        "inputs": [],
+        "output": {
+          "path": {
+            "segments": [
+              {
+                "ident": "Result",
+                "arguments": {
+                  "angle_bracketed": {
+                    "args": [
+                      {
+                        "type": {
+                          "tuple": {
+                            "elems": []
+                          }
+                        }
+                      },
+                      {
+                        "type": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Box",
+                                "arguments": {
+                                  "angle_bracketed": {
+                                    "args": [
+                                      {
+                                        "type": {
+                                          "trait_object": {
+                                            "dyn": true,
+                                            "bounds": [
+                                              {
+                                                "trait": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "std"
+                                                      },
+                                                      {
+                                                        "ident": "error"
+                                                      },
+                                                      {
+                                                        "ident": "Error"
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "input_dir"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "method_call": {
+                        "receiver": {
+                          "method_call": {
+                            "receiver": {
+                              "call": {
+                                "func": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "env"
+                                      },
+                                      {
+                                        "ident": "args_os"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "args": []
+                              }
+                            },
+                            "method": "nth",
+                            "args": [
+                              {
+                                "lit": {
+                                  "int": "1"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "method": "map",
+                        "args": [
+                          {
+                            "closure": {
+                              "inputs": [
+                                {
+                                  "ident": {
+                                    "ident": "s"
+                                  }
+                                }
+                              ],
+                              "output": null,
+                              "body": {
+                                "method_call": {
+                                  "receiver": {
+                                    "method_call": {
+                                      "receiver": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "s"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "method": "into_string",
+                                      "args": []
+                                    }
+                                  },
+                                  "method": "unwrap_or_else",
+                                  "args": [
+                                    {
+                                      "closure": {
+                                        "inputs": [
+                                          {
+                                            "_": {}
+                                          }
+                                        ],
+                                        "output": null,
+                                        "body": {
+                                          "block": {
+                                            "stmts": [
+                                              {
+                                                "macro": {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "eprintln"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "delimiter": "paren",
+                                                  "tokens": [
+                                                    {
+                                                      "lit": "\"Invalid input directory path\""
+                                                    }
+                                                  ],
+                                                  "semi_token": true
+                                                }
+                                              },
+                                              {
+                                                "expr": [
+                                                  {
+                                                    "call": {
+                                                      "func": {
+                                                        "path": {
+                                                          "segments": [
+                                                            {
+                                                              "ident": "std"
+                                                            },
+                                                            {
+                                                              "ident": "process"
+                                                            },
+                                                            {
+                                                              "ident": "exit"
+                                                            }
+                                                          ]
+                                                        }
+                                                      },
+                                                      "args": [
+                                                        {
+                                                          "lit": {
+                                                            "int": "1"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  true
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap_or_else",
+                    "args": [
+                      {
+                        "closure": {
+                          "inputs": [],
+                          "output": null,
+                          "body": {
+                            "block": {
+                              "stmts": [
+                                {
+                                  "macro": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "println"
+                                        }
+                                      ]
+                                    },
+                                    "delimiter": "paren",
+                                    "tokens": [
+                                      {
+                                        "lit": "\"Usage: rust2json <input_directory>\""
+                                      }
+                                    ],
+                                    "semi_token": true
+                                  }
+                                },
+                                {
+                                  "expr": [
+                                    {
+                                      "call": {
+                                        "func": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "std"
+                                              },
+                                              {
+                                                "ident": "process"
+                                              },
+                                              {
+                                                "ident": "exit"
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "args": [
+                                          {
+                                            "lit": {
+                                              "int": "1"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    true
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "for_loop": {
+                  "pat": {
+                    "ident": {
+                      "ident": "entry"
+                    }
+                  },
+                  "expr": {
+                    "method_call": {
+                      "receiver": {
+                        "method_call": {
+                          "receiver": {
+                            "method_call": {
+                              "receiver": {
+                                "call": {
+                                  "func": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "WalkDir"
+                                        },
+                                        {
+                                          "ident": "new"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "args": [
+                                    {
+                                      "reference": {
+                                        "expr": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "input_dir"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "method": "into_iter",
+                              "args": []
+                            }
+                          },
+                          "method": "filter_map",
+                          "args": [
+                            {
+                              "closure": {
+                                "inputs": [
+                                  {
+                                    "ident": {
+                                      "ident": "e"
+                                    }
+                                  }
+                                ],
+                                "output": null,
+                                "body": {
+                                  "method_call": {
+                                    "receiver": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "e"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "method": "ok",
+                                    "args": []
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "method": "filter",
+                      "args": [
+                        {
+                          "closure": {
+                            "inputs": [
+                              {
+                                "ident": {
+                                  "ident": "e"
+                                }
+                              }
+                            ],
+                            "output": null,
+                            "body": {
+                              "method_call": {
+                                "receiver": {
+                                  "method_call": {
+                                    "receiver": {
+                                      "method_call": {
+                                        "receiver": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "e"
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "method": "path",
+                                        "args": []
+                                      }
+                                    },
+                                    "method": "extension",
+                                    "args": []
+                                  }
+                                },
+                                "method": "map_or",
+                                "args": [
+                                  {
+                                    "lit": {
+                                      "bool": false
+                                    }
+                                  },
+                                  {
+                                    "closure": {
+                                      "inputs": [
+                                        {
+                                          "ident": {
+                                            "ident": "ext"
+                                          }
+                                        }
+                                      ],
+                                      "output": null,
+                                      "body": {
+                                        "binary": {
+                                          "left": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "ext"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "op": "==",
+                                          "right": {
+                                            "lit": {
+                                              "str": "\"rs\""
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "body": [
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "input_path"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "method_call": {
+                              "receiver": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "entry"
+                                    }
+                                  ]
+                                }
+                              },
+                              "method": "path",
+                              "args": []
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "output_path"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "method_call": {
+                              "receiver": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "input_path"
+                                    }
+                                  ]
+                                }
+                              },
+                              "method": "with_extension",
+                              "args": [
+                                {
+                                  "lit": {
+                                    "str": "\"rs.json\""
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "expr": [
+                        {
+                          "if": {
+                            "cond": {
+                              "let": {
+                                "pat": {
+                                  "tuple_struct": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "Ok"
+                                        }
+                                      ]
+                                    },
+                                    "elems": [
+                                      {
+                                        "ident": {
+                                          "ident": "output_meta"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "expr": {
+                                  "call": {
+                                    "func": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "fs"
+                                          },
+                                          {
+                                            "ident": "metadata"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "args": [
+                                      {
+                                        "reference": {
+                                          "expr": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "output_path"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            "then_branch": [
+                              {
+                                "expr": [
+                                  {
+                                    "if": {
+                                      "cond": {
+                                        "let": {
+                                          "pat": {
+                                            "tuple_struct": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "Ok"
+                                                  }
+                                                ]
+                                              },
+                                              "elems": [
+                                                {
+                                                  "ident": {
+                                                    "ident": "input_meta"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "expr": {
+                                            "call": {
+                                              "func": {
+                                                "path": {
+                                                  "segments": [
+                                                    {
+                                                      "ident": "fs"
+                                                    },
+                                                    {
+                                                      "ident": "metadata"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "args": [
+                                                {
+                                                  "path": {
+                                                    "segments": [
+                                                      {
+                                                        "ident": "input_path"
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "then_branch": [
+                                        {
+                                          "expr": [
+                                            {
+                                              "if": {
+                                                "cond": {
+                                                  "let": {
+                                                    "pat": {
+                                                      "tuple": {
+                                                        "elems": [
+                                                          {
+                                                            "tuple_struct": {
+                                                              "path": {
+                                                                "segments": [
+                                                                  {
+                                                                    "ident": "Ok"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "elems": [
+                                                                {
+                                                                  "ident": {
+                                                                    "ident": "input_time"
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          },
+                                                          {
+                                                            "tuple_struct": {
+                                                              "path": {
+                                                                "segments": [
+                                                                  {
+                                                                    "ident": "Ok"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "elems": [
+                                                                {
+                                                                  "ident": {
+                                                                    "ident": "output_time"
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "expr": {
+                                                      "tuple": {
+                                                        "elems": [
+                                                          {
+                                                            "method_call": {
+                                                              "receiver": {
+                                                                "path": {
+                                                                  "segments": [
+                                                                    {
+                                                                      "ident": "input_meta"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              "method": "modified",
+                                                              "args": []
+                                                            }
+                                                          },
+                                                          {
+                                                            "method_call": {
+                                                              "receiver": {
+                                                                "path": {
+                                                                  "segments": [
+                                                                    {
+                                                                      "ident": "output_meta"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              "method": "modified",
+                                                              "args": []
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "then_branch": [
+                                                  {
+                                                    "expr": [
+                                                      {
+                                                        "if": {
+                                                          "cond": {
+                                                            "binary": {
+                                                              "left": {
+                                                                "path": {
+                                                                  "segments": [
+                                                                    {
+                                                                      "ident": "output_time"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              },
+                                                              "op": ">=",
+                                                              "right": {
+                                                                "path": {
+                                                                  "segments": [
+                                                                    {
+                                                                      "ident": "input_time"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "then_branch": [
+                                                            {
+                                                              "expr": [
+                                                                {
+                                                                  "continue": {}
+                                                                },
+                                                                true
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      },
+                                                      false
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            false
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  false
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        false
+                      ]
+                    },
+                    {
+                      "macro": {
+                        "path": {
+                          "segments": [
+                            {
+                              "ident": "println"
+                            }
+                          ]
+                        },
+                        "delimiter": "paren",
+                        "tokens": [
+                          {
+                            "lit": "\"Processing: {:?}\""
+                          },
+                          {
+                            "punct": {
+                              "op": ",",
+                              "spacing": "alone"
+                            }
+                          },
+                          {
+                            "ident": "input_path"
+                          }
+                        ],
+                        "semi_token": true
+                      }
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "code"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "match": {
+                              "expr": {
+                                "call": {
+                                  "func": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "fs"
+                                        },
+                                        {
+                                          "ident": "read_to_string"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "args": [
+                                    {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "input_path"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "arms": [
+                                {
+                                  "pat": {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Ok"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "ident": {
+                                            "ident": "code"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "code"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "pat": {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Err"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "ident": {
+                                            "ident": "e"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "block": {
+                                      "stmts": [
+                                        {
+                                          "macro": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "eprintln"
+                                                }
+                                              ]
+                                            },
+                                            "delimiter": "paren",
+                                            "tokens": [
+                                              {
+                                                "lit": "\"Error reading {:?}: {}\""
+                                              },
+                                              {
+                                                "punct": {
+                                                  "op": ",",
+                                                  "spacing": "alone"
+                                                }
+                                              },
+                                              {
+                                                "ident": "input_path"
+                                              },
+                                              {
+                                                "punct": {
+                                                  "op": ",",
+                                                  "spacing": "alone"
+                                                }
+                                              },
+                                              {
+                                                "ident": "e"
+                                              }
+                                            ],
+                                            "semi_token": true
+                                          }
+                                        },
+                                        {
+                                          "expr": [
+                                            {
+                                              "continue": {}
+                                            },
+                                            true
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "syntax"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "match": {
+                              "expr": {
+                                "call": {
+                                  "func": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "syn"
+                                        },
+                                        {
+                                          "ident": "parse_file"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "args": [
+                                    {
+                                      "reference": {
+                                        "expr": {
+                                          "path": {
+                                            "segments": [
+                                              {
+                                                "ident": "code"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              "arms": [
+                                {
+                                  "pat": {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Ok"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "ident": {
+                                            "ident": "syntax"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "syntax"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "pat": {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Err"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "ident": {
+                                            "ident": "e"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "block": {
+                                      "stmts": [
+                                        {
+                                          "macro": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "eprintln"
+                                                }
+                                              ]
+                                            },
+                                            "delimiter": "paren",
+                                            "tokens": [
+                                              {
+                                                "lit": "\"Error parsing {:?}: {}\""
+                                              },
+                                              {
+                                                "punct": {
+                                                  "op": ",",
+                                                  "spacing": "alone"
+                                                }
+                                              },
+                                              {
+                                                "ident": "input_path"
+                                              },
+                                              {
+                                                "punct": {
+                                                  "op": ",",
+                                                  "spacing": "alone"
+                                                }
+                                              },
+                                              {
+                                                "ident": "e"
+                                              }
+                                            ],
+                                            "semi_token": true
+                                          }
+                                        },
+                                        {
+                                          "expr": [
+                                            {
+                                              "continue": {}
+                                            },
+                                            true
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "let": {
+                        "pat": {
+                          "ident": {
+                            "ident": "buf"
+                          }
+                        },
+                        "init": {
+                          "expr": {
+                            "call": {
+                              "func": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "json"
+                                    },
+                                    {
+                                      "ident": "to_string_pretty"
+                                    }
+                                  ]
+                                }
+                              },
+                              "args": [
+                                {
+                                  "reference": {
+                                    "expr": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "syntax"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "expr": [
+                        {
+                          "if": {
+                            "cond": {
+                              "let": {
+                                "pat": {
+                                  "tuple_struct": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "Err"
+                                        }
+                                      ]
+                                    },
+                                    "elems": [
+                                      {
+                                        "ident": {
+                                          "ident": "e"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "expr": {
+                                  "call": {
+                                    "func": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "fs"
+                                          },
+                                          {
+                                            "ident": "write"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "args": [
+                                      {
+                                        "reference": {
+                                          "expr": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "output_path"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "buf"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            "then_branch": [
+                              {
+                                "macro": {
+                                  "path": {
+                                    "segments": [
+                                      {
+                                        "ident": "eprintln"
+                                      }
+                                    ]
+                                  },
+                                  "delimiter": "paren",
+                                  "tokens": [
+                                    {
+                                      "lit": "\"Error writing {:?}: {}\""
+                                    },
+                                    {
+                                      "punct": {
+                                        "op": ",",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "ident": "output_path"
+                                    },
+                                    {
+                                      "punct": {
+                                        "op": ",",
+                                        "spacing": "alone"
+                                      }
+                                    },
+                                    {
+                                      "ident": "e"
+                                    }
+                                  ],
+                                  "semi_token": true
+                                }
+                              },
+                              {
+                                "expr": [
+                                  {
+                                    "continue": {}
+                                  },
+                                  true
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        false
+                      ]
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "Ok"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "tuple": {
+                        "elems": []
+                      }
+                    }
+                  ]
+                }
+              },
+              false
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "super",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "path": {
+                "ident": "ast_struct",
+                "tree": {
+                  "group": [
+                    {
+                      "ident": "Block"
+                    },
+                    {
+                      "ident": "Local"
+                    },
+                    {
+                      "ident": "LocalInit"
+                    },
+                    {
+                      "ident": "StmtMacro"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_enum"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`enum@syn::Stmt`].\""
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "enum"
+          },
+          {
+            "ident": "Stmt"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "rename"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"let\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "Local"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "Local"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Item"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "Item"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Expr"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "Expr"
+                      },
+                      {
+                        "punct": {
+                          "op": ",",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "bool"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Macro"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "StmtMacro"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

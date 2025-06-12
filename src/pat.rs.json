@@ -1,0 +1,344 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "super",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "ast_enum",
+                    "tree": {
+                      "ident": "Pat"
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "ast_struct",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "FieldPat"
+                        },
+                        {
+                          "ident": "PatIdent"
+                        },
+                        {
+                          "ident": "PatParen"
+                        },
+                        {
+                          "ident": "PatReference"
+                        },
+                        {
+                          "ident": "PatRest"
+                        },
+                        {
+                          "ident": "PatSlice"
+                        },
+                        {
+                          "ident": "PatStruct"
+                        },
+                        {
+                          "ident": "PatTuple"
+                        },
+                        {
+                          "ident": "PatTupleStruct"
+                        },
+                        {
+                          "ident": "PatType"
+                        },
+                        {
+                          "ident": "PatWild"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_struct"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`struct@syn::PatOr`].\""
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "struct"
+          },
+          {
+            "ident": "PatOr"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"Vec::is_empty\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "attrs"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Vec"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Attribute"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "default"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "skip_serializing_if"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"not\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "leading_vert"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "bool"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "ident": "cases"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Punctuated"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Pat"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

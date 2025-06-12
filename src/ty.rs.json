@@ -1,0 +1,752 @@
+{
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "super",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "ast_enum",
+                    "tree": {
+                      "ident": "Type"
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "ast_struct",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "Abi"
+                        },
+                        {
+                          "ident": "BareFnArg"
+                        },
+                        {
+                          "ident": "BareVariadic"
+                        },
+                        {
+                          "ident": "TypeArray"
+                        },
+                        {
+                          "ident": "TypeBareFn"
+                        },
+                        {
+                          "ident": "TypeGroup"
+                        },
+                        {
+                          "ident": "TypeImplTrait"
+                        },
+                        {
+                          "ident": "TypeMacro"
+                        },
+                        {
+                          "ident": "TypeParen"
+                        },
+                        {
+                          "ident": "TypePath"
+                        },
+                        {
+                          "ident": "TypePtr"
+                        },
+                        {
+                          "ident": "TypeReference"
+                        },
+                        {
+                          "ident": "TypeSlice"
+                        },
+                        {
+                          "ident": "TypeTraitObject"
+                        },
+                        {
+                          "ident": "TypeTuple"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "macro": {
+        "path": {
+          "segments": [
+            {
+              "ident": "ast_struct"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "doc"
+                },
+                {
+                  "punct": {
+                    "op": "=",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "lit": "\" An adapter for [`enum@syn::ReturnType`].\""
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "derive"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "Default"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": "#",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "bracket",
+              "stream": [
+                {
+                  "ident": "serde"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "transparent"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "ident": "pub"
+          },
+          {
+            "ident": "struct"
+          },
+          {
+            "ident": "ReturnType"
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "ident": "ty"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Option"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Box"
+                },
+                {
+                  "punct": {
+                    "op": "<",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Type"
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ">",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "mod": {
+        "ident": "convert",
+        "content": [
+          {
+            "use": {
+              "tree": {
+                "path": {
+                  "ident": "super",
+                  "tree": "*"
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "syn_trait_impl"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "syn"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ReturnType"
+                }
+              ],
+              "semi_token": true
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "syn"
+                                        },
+                                        {
+                                          "ident": "ReturnType"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "ReturnType"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "other"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "syn"
+                                    },
+                                    {
+                                      "ident": "ReturnType"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "item": {
+                          "use": {
+                            "tree": {
+                              "path": {
+                                "ident": "syn",
+                                "tree": {
+                                  "ident": "ReturnType"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "expr": [
+                          {
+                            "match": {
+                              "expr": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "other"
+                                    }
+                                  ]
+                                }
+                              },
+                              "arms": [
+                                {
+                                  "pat": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "ReturnType"
+                                        },
+                                        {
+                                          "ident": "Default"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Self"
+                                          }
+                                        ]
+                                      },
+                                      "fields": [
+                                        {
+                                          "ident": "ty",
+                                          "colon_token": true,
+                                          "expr": {
+                                            "path": {
+                                              "segments": [
+                                                {
+                                                  "ident": "None"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "pat": {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "ReturnType"
+                                          },
+                                          {
+                                            "ident": "Type"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "_": {}
+                                        },
+                                        {
+                                          "ident": {
+                                            "ident": "x"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Self"
+                                          }
+                                        ]
+                                      },
+                                      "fields": [
+                                        {
+                                          "ident": "ty",
+                                          "colon_token": true,
+                                          "expr": {
+                                            "call": {
+                                              "func": {
+                                                "path": {
+                                                  "segments": [
+                                                    {
+                                                      "ident": "Some"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "args": [
+                                                {
+                                                  "method_call": {
+                                                    "receiver": {
+                                                      "path": {
+                                                        "segments": [
+                                                          {
+                                                            "ident": "x"
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    "method": "map_into",
+                                                    "args": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "impl": {
+              "trait": [
+                false,
+                {
+                  "segments": [
+                    {
+                      "ident": "From",
+                      "arguments": {
+                        "angle_bracketed": {
+                          "args": [
+                            {
+                              "type": {
+                                "reference": {
+                                  "elem": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "ReturnType"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "self_ty": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "syn"
+                    },
+                    {
+                      "ident": "ReturnType"
+                    }
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "fn": {
+                    "ident": "from",
+                    "inputs": [
+                      {
+                        "typed": {
+                          "pat": {
+                            "ident": {
+                              "ident": "other"
+                            }
+                          },
+                          "ty": {
+                            "reference": {
+                              "elem": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "ReturnType"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "output": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Self"
+                          }
+                        ]
+                      }
+                    },
+                    "stmts": [
+                      {
+                        "item": {
+                          "use": {
+                            "tree": {
+                              "path": {
+                                "ident": "syn",
+                                "tree": {
+                                  "ident": "ReturnType"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "expr": [
+                          {
+                            "match": {
+                              "expr": {
+                                "reference": {
+                                  "expr": {
+                                    "field": {
+                                      "base": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "other"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "ident": "ty"
+                                    }
+                                  }
+                                }
+                              },
+                              "arms": [
+                                {
+                                  "pat": {
+                                    "ident": {
+                                      "ident": "None"
+                                    }
+                                  },
+                                  "body": {
+                                    "path": {
+                                      "segments": [
+                                        {
+                                          "ident": "ReturnType"
+                                        },
+                                        {
+                                          "ident": "Default"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "pat": {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "Some"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "ident": {
+                                            "ident": "x"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "body": {
+                                    "call": {
+                                      "func": {
+                                        "path": {
+                                          "segments": [
+                                            {
+                                              "ident": "ReturnType"
+                                            },
+                                            {
+                                              "ident": "Type"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "args": [
+                                        {
+                                          "call": {
+                                            "func": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "default"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "args": []
+                                          }
+                                        },
+                                        {
+                                          "method_call": {
+                                            "receiver": {
+                                              "path": {
+                                                "segments": [
+                                                  {
+                                                    "ident": "x"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            "method": "map_into",
+                                            "args": []
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          false
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

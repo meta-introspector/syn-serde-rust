@@ -1,0 +1,1109 @@
+{
+  "items": [
+    {
+      "macro": {
+        "ident": "ast_struct",
+        "path": {
+          "segments": [
+            {
+              "ident": "macro_rules"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "group": {
+              "delimiter": "parenthesis",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "#",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "group": {
+                          "delimiter": "bracket",
+                          "stream": [
+                            {
+                              "punct": {
+                                "op": "$",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "attrs"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "meta"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "ident": "struct"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "name"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ident"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "$",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "rest"
+                      },
+                      {
+                        "punct": {
+                          "op": ":",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "tt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": "=",
+              "spacing": "joint"
+            }
+          },
+          {
+            "punct": {
+              "op": ">",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "derive"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "serde_derive"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Serialize"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "serde_derive"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Deserialize"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "#",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "group": {
+                          "delimiter": "bracket",
+                          "stream": [
+                            {
+                              "punct": {
+                                "op": "$",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "attrs"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "ident": "struct"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "name"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "$",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "rest"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": ";",
+              "spacing": "alone"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "macro": {
+        "ident": "ast_enum",
+        "path": {
+          "segments": [
+            {
+              "ident": "macro_rules"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "group": {
+              "delimiter": "parenthesis",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "#",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "group": {
+                          "delimiter": "bracket",
+                          "stream": [
+                            {
+                              "punct": {
+                                "op": "$",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "attrs"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "meta"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "ident": "enum"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "name"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ident"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "$",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "rest"
+                      },
+                      {
+                        "punct": {
+                          "op": ":",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "tt"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": "=",
+              "spacing": "joint"
+            }
+          },
+          {
+            "punct": {
+              "op": ">",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "parenthesis",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "derive"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "serde_derive"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Serialize"
+                            },
+                            {
+                              "punct": {
+                                "op": ",",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "serde_derive"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Deserialize"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "#",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "bracket",
+                    "stream": [
+                      {
+                        "ident": "serde"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "rename_all"
+                            },
+                            {
+                              "punct": {
+                                "op": "=",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "lit": "\"snake_case\""
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "#",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "group": {
+                          "delimiter": "bracket",
+                          "stream": [
+                            {
+                              "punct": {
+                                "op": "$",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "attrs"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "pub"
+                },
+                {
+                  "ident": "enum"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "name"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "punct": {
+                          "op": "$",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "rest"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "*",
+                    "spacing": "alone"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": ";",
+              "spacing": "alone"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "macro": {
+        "ident": "syn_trait_impl",
+        "path": {
+          "segments": [
+            {
+              "ident": "macro_rules"
+            }
+          ]
+        },
+        "delimiter": "brace",
+        "tokens": [
+          {
+            "group": {
+              "delimiter": "parenthesis",
+              "stream": [
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "path"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ident"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ty"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ident"
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": "=",
+              "spacing": "joint"
+            }
+          },
+          {
+            "punct": {
+              "op": ">",
+              "spacing": "alone"
+            }
+          },
+          {
+            "group": {
+              "delimiter": "brace",
+              "stream": [
+                {
+                  "ident": "impl"
+                },
+                {
+                  "ident": "crate"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "sealed"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Sealed"
+                },
+                {
+                  "ident": "for"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "path"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ty"
+                },
+                {
+                  "group": {
+                    "delimiter": "brace",
+                    "stream": []
+                  }
+                },
+                {
+                  "ident": "impl"
+                },
+                {
+                  "ident": "crate"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "Syn"
+                },
+                {
+                  "ident": "for"
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "path"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": "$",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "ty"
+                },
+                {
+                  "group": {
+                    "delimiter": "brace",
+                    "stream": [
+                      {
+                        "ident": "type"
+                      },
+                      {
+                        "ident": "Adapter"
+                      },
+                      {
+                        "punct": {
+                          "op": "=",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "punct": {
+                          "op": "$",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "ty"
+                      },
+                      {
+                        "punct": {
+                          "op": ";",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "fn"
+                      },
+                      {
+                        "ident": "to_adapter"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "punct": {
+                                "op": "&",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "self"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "punct": {
+                          "op": "-",
+                          "spacing": "joint"
+                        }
+                      },
+                      {
+                        "punct": {
+                          "op": ">",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "Self"
+                      },
+                      {
+                        "punct": {
+                          "op": ":",
+                          "spacing": "joint"
+                        }
+                      },
+                      {
+                        "punct": {
+                          "op": ":",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "Adapter"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "brace",
+                          "stream": [
+                            {
+                              "ident": "Self"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Adapter"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "from"
+                            },
+                            {
+                              "group": {
+                                "delimiter": "parenthesis",
+                                "stream": [
+                                  {
+                                    "ident": "self"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "ident": "fn"
+                      },
+                      {
+                        "ident": "from_adapter"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "parenthesis",
+                          "stream": [
+                            {
+                              "ident": "adapter"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": "&",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Self"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "Adapter"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "punct": {
+                          "op": "-",
+                          "spacing": "joint"
+                        }
+                      },
+                      {
+                        "punct": {
+                          "op": ">",
+                          "spacing": "alone"
+                        }
+                      },
+                      {
+                        "ident": "Self"
+                      },
+                      {
+                        "group": {
+                          "delimiter": "brace",
+                          "stream": [
+                            {
+                              "ident": "Self"
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "joint"
+                              }
+                            },
+                            {
+                              "punct": {
+                                "op": ":",
+                                "spacing": "alone"
+                              }
+                            },
+                            {
+                              "ident": "from"
+                            },
+                            {
+                              "group": {
+                                "delimiter": "parenthesis",
+                                "stream": [
+                                  {
+                                    "ident": "adapter"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "punct": {
+              "op": ";",
+              "spacing": "alone"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

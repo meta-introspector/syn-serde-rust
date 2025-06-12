@@ -1,0 +1,2771 @@
+{
+  "attrs": [
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "allow"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "needless_raw_string_hashes"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "syn",
+            "tree": "*"
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "ident": "print_actual",
+        "inputs": [
+          {
+            "typed": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "ty": {
+                "reference": {
+                  "elem": {
+                    "impl_trait": {
+                      "bounds": [
+                        {
+                          "trait": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "syn_serde"
+                                },
+                                {
+                                  "ident": "Syn"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "output": null,
+        "stmts": [
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "println"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "lit": "\"actual:\\n```\\n{}\\n\""
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "syn_serde"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "joint"
+                  }
+                },
+                {
+                  "punct": {
+                    "op": ":",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "to_string_pretty"
+                },
+                {
+                  "group": {
+                    "delimiter": "parenthesis",
+                    "stream": [
+                      {
+                        "ident": "actual"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_unit",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"struct Unit;\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"ident\\\": \\\"Unit\\\",\\n        \\\"fields\\\": \\\"unit\\\"\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "ser"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "ser"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "ser"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "ser"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_struct",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        #[derive(Debug, Clone)]\\n        pub struct Item {\\n            pub ident: Ident,\\n            pub attrs: Vec<Attribute>\\n        }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"attrs\\\": [\\n          {\\n            \\\"style\\\": \\\"outer\\\",\\n            \\\"meta\\\": {\\n              \\\"list\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"derive\\\"\\n                    }\\n                  ]\\n                },\\n                \\\"delimiter\\\": \\\"paren\\\",\\n                \\\"tokens\\\": [\\n                  {\\n                    \\\"ident\\\": \\\"Debug\\\"\\n                  },\\n                  {\\n                    \\\"punct\\\": {\\n                      \\\"op\\\": \\\",\\\",\\n                      \\\"spacing\\\": \\\"alone\\\"\\n                    }\\n                  },\\n                  {\\n                    \\\"ident\\\": \\\"Clone\\\"\\n                  }\\n                ]\\n              }\\n            }\\n          }\\n        ],\\n        \\\"vis\\\": \\\"pub\\\",\\n        \\\"ident\\\": \\\"Item\\\",\\n        \\\"fields\\\": {\\n          \\\"named\\\": [\\n            {\\n              \\\"vis\\\": \\\"pub\\\",\\n              \\\"ident\\\": \\\"ident\\\",\\n              \\\"colon_token\\\": true,\\n              \\\"ty\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"Ident\\\"\\n                    }\\n                  ]\\n                }\\n              }\\n            },\\n            {\\n              \\\"vis\\\": \\\"pub\\\",\\n              \\\"ident\\\": \\\"attrs\\\",\\n              \\\"colon_token\\\": true,\\n              \\\"ty\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"Vec\\\",\\n                      \\\"arguments\\\": {\\n                        \\\"angle_bracketed\\\": {\\n                          \\\"args\\\": [\\n                            {\\n                              \\\"type\\\": {\\n                                \\\"path\\\": {\\n                                  \\\"segments\\\": [\\n                                    {\\n                                      \\\"ident\\\": \\\"Attribute\\\"\\n                                    }\\n                                  ]\\n                                }\\n                              }\\n                            }\\n                          ]\\n                        }\\n                      }\\n                    }\\n                  ]\\n                }\\n              }\\n            }\\n          ]\\n        }\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_union",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        union MaybeUninit<T> {\\n            uninit: (),\\n            value: T\\n        }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"union\\\": {\\n        \\\"ident\\\": \\\"MaybeUninit\\\",\\n        \\\"generics\\\": {\\n          \\\"params\\\": [\\n            {\\n              \\\"type\\\": {\\n                \\\"ident\\\": \\\"T\\\"\\n              }\\n            }\\n          ]\\n        },\\n        \\\"fields\\\": [\\n          {\\n            \\\"ident\\\": \\\"uninit\\\",\\n            \\\"colon_token\\\": true,\\n            \\\"ty\\\": {\\n              \\\"tuple\\\": {\\n                \\\"elems\\\": []\\n              }\\n            }\\n          },\\n          {\\n            \\\"ident\\\": \\\"value\\\",\\n            \\\"colon_token\\\": true,\\n            \\\"ty\\\": {\\n              \\\"path\\\": {\\n                \\\"segments\\\": [\\n                  {\\n                    \\\"ident\\\": \\\"T\\\"\\n                  }\\n                ]\\n              }\\n            }\\n          }\\n        ]\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_enum",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        /// See the std::result module documentation for details.\\n        #[must_use]\\n        pub enum Result<T, E> {\\n            Ok(T),\\n            Err(E),\\n            Surprise = 0isize,\\n\\n            // Smuggling data into a proc_macro_derive,\\n            // in the style of https://github.com/dtolnay/proc-macro-hack\\n            ProcMacroHack = (0, \\\"data\\\").0\\n        }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"enum\\\": {\\n        \\\"attrs\\\": [\\n          {\\n            \\\"style\\\": \\\"outer\\\",\\n            \\\"meta\\\": {\\n              \\\"name_value\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"doc\\\"\\n                    }\\n                  ]\\n                },\\n                \\\"value\\\": {\\n                  \\\"lit\\\": {\\n                    \\\"str\\\": \\\"\\\\\\\" See the std::result module documentation for details.\\\\\\\"\\\"\\n                  }\\n                }\\n              }\\n            }\\n          },\\n          {\\n            \\\"style\\\": \\\"outer\\\",\\n            \\\"meta\\\": {\\n              \\\"path\\\": {\\n                \\\"segments\\\": [\\n                  {\\n                    \\\"ident\\\": \\\"must_use\\\"\\n                  }\\n                ]\\n              }\\n            }\\n          }\\n        ],\\n        \\\"vis\\\": \\\"pub\\\",\\n        \\\"ident\\\": \\\"Result\\\",\\n        \\\"generics\\\": {\\n          \\\"params\\\": [\\n            {\\n              \\\"type\\\": {\\n                \\\"ident\\\": \\\"T\\\"\\n              }\\n            },\\n            {\\n              \\\"type\\\": {\\n                \\\"ident\\\": \\\"E\\\"\\n              }\\n            }\\n          ]\\n        },\\n        \\\"variants\\\": [\\n          {\\n            \\\"ident\\\": \\\"Ok\\\",\\n            \\\"fields\\\": {\\n              \\\"unnamed\\\": [\\n                {\\n                  \\\"ty\\\": {\\n                    \\\"path\\\": {\\n                      \\\"segments\\\": [\\n                        {\\n                          \\\"ident\\\": \\\"T\\\"\\n                        }\\n                      ]\\n                    }\\n                  }\\n                }\\n              ]\\n            }\\n          },\\n          {\\n            \\\"ident\\\": \\\"Err\\\",\\n            \\\"fields\\\": {\\n              \\\"unnamed\\\": [\\n                {\\n                  \\\"ty\\\": {\\n                    \\\"path\\\": {\\n                      \\\"segments\\\": [\\n                        {\\n                          \\\"ident\\\": \\\"E\\\"\\n                        }\\n                      ]\\n                    }\\n                  }\\n                }\\n              ]\\n            }\\n          },\\n          {\\n            \\\"ident\\\": \\\"Surprise\\\",\\n            \\\"fields\\\": \\\"unit\\\",\\n            \\\"discriminant\\\": {\\n              \\\"lit\\\": {\\n                \\\"int\\\": \\\"0isize\\\"\\n              }\\n            }\\n          },\\n          {\\n            \\\"ident\\\": \\\"ProcMacroHack\\\",\\n            \\\"fields\\\": \\\"unit\\\",\\n            \\\"discriminant\\\": {\\n              \\\"field\\\": {\\n                \\\"base\\\": {\\n                  \\\"tuple\\\": {\\n                    \\\"elems\\\": [\\n                      {\\n                        \\\"lit\\\": {\\n                          \\\"int\\\": \\\"0\\\"\\n                        }\\n                      },\\n                      {\\n                        \\\"lit\\\": {\\n                          \\\"str\\\": \\\"\\\\\\\"data\\\\\\\"\\\"\\n                        }\\n                      }\\n                    ]\\n                  }\\n                },\\n                \\\"index\\\": 0\\n              }\\n            }\\n          }\\n        ]\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_pub_restricted",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        pub(in m) struct Z(pub(in m::n) u8);\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"vis\\\": {\\n          \\\"restricted\\\": {\\n            \\\"in_token\\\": true,\\n            \\\"path\\\": {\\n              \\\"segments\\\": [\\n                {\\n                  \\\"ident\\\": \\\"m\\\"\\n                }\\n              ]\\n            }\\n          }\\n        },\\n        \\\"ident\\\": \\\"Z\\\",\\n        \\\"fields\\\": {\\n          \\\"unnamed\\\": [\\n            {\\n              \\\"vis\\\": {\\n                \\\"restricted\\\": {\\n                  \\\"in_token\\\": true,\\n                  \\\"path\\\": {\\n                    \\\"segments\\\": [\\n                      {\\n                        \\\"ident\\\": \\\"m\\\"\\n                      },\\n                      {\\n                        \\\"ident\\\": \\\"n\\\"\\n                      }\\n                    ]\\n                  }\\n                }\\n              },\\n              \\\"ty\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"u8\\\"\\n                    }\\n                  ]\\n                }\\n              }\\n            }\\n          ]\\n        }\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_pub_restricted_crate",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        pub(crate) struct S;\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"vis\\\": {\\n          \\\"restricted\\\": {\\n            \\\"path\\\": {\\n              \\\"segments\\\": [\\n                {\\n                  \\\"ident\\\": \\\"crate\\\"\\n                }\\n              ]\\n            }\\n          }\\n        },\\n        \\\"ident\\\": \\\"S\\\",\\n        \\\"fields\\\": \\\"unit\\\"\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_pub_restricted_super",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        pub(super) struct S;\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"vis\\\": {\\n          \\\"restricted\\\": {\\n            \\\"path\\\": {\\n              \\\"segments\\\": [\\n                {\\n                  \\\"ident\\\": \\\"super\\\"\\n                }\\n              ]\\n            }\\n          }\\n        },\\n        \\\"ident\\\": \\\"S\\\",\\n        \\\"fields\\\": \\\"unit\\\"\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_pub_restricted_in_super",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        pub(in super) struct S;\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"vis\\\": {\\n          \\\"restricted\\\": {\\n            \\\"in_token\\\": true,\\n            \\\"path\\\": {\\n              \\\"segments\\\": [\\n                {\\n                  \\\"ident\\\": \\\"super\\\"\\n                }\\n              ]\\n            }\\n          }\\n        },\\n        \\\"ident\\\": \\\"S\\\",\\n        \\\"fields\\\": \\\"unit\\\"\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_ambiguous_crate",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"struct S(crate::X);\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"struct\\\": {\\n        \\\"ident\\\": \\\"S\\\",\\n        \\\"fields\\\": {\\n          \\\"unnamed\\\": [\\n            {\\n              \\\"ty\\\": {\\n                \\\"path\\\": {\\n                  \\\"segments\\\": [\\n                    {\\n                      \\\"ident\\\": \\\"crate\\\"\\n                    },\\n                    {\\n                      \\\"ident\\\": \\\"X\\\"\\n                    }\\n                  ]\\n                }\\n              }\\n            }\\n          ]\\n        }\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fn": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "test"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "test_static_mut",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "raw"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n        static mut A: u8 = 0;\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "lit": {
+                    "str": "\"\\n    {\\n      \\\"static\\\": {\\n        \\\"mut\\\": \\\"mut\\\",\\n        \\\"ident\\\": \\\"A\\\",\\n        \\\"ty\\\": {\\n          \\\"path\\\": {\\n            \\\"segments\\\": [\\n              {\\n                \\\"ident\\\": \\\"u8\\\"\\n              }\\n            ]\\n          }\\n        },\\n        \\\"expr\\\": {\\n          \\\"lit\\\": {\\n            \\\"int\\\": \\\"0\\\"\\n          }\\n        }\\n      }\\n    }\\n    \""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "actual"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "syn"
+                              },
+                              {
+                                "ident": "parse_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "raw"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "print_actual"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "actual"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "let": {
+              "pat": {
+                "type": {
+                  "pat": {
+                    "ident": {
+                      "ident": "json"
+                    }
+                  },
+                  "ty": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "syn_serde"
+                        },
+                        {
+                          "ident": "Item"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "call": {
+                    "func": {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "Item"
+                          },
+                          {
+                            "ident": "from"
+                          }
+                        ]
+                      }
+                    },
+                    "args": [
+                      {
+                        "reference": {
+                          "expr": {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "json"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "macro": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "assert_eq"
+                  }
+                ]
+              },
+              "delimiter": "paren",
+              "tokens": [
+                {
+                  "ident": "json"
+                },
+                {
+                  "punct": {
+                    "op": ",",
+                    "spacing": "alone"
+                  }
+                },
+                {
+                  "ident": "actual"
+                }
+              ],
+              "semi_token": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

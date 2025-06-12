@@ -1,0 +1,277 @@
+{
+  "items": [
+    {
+      "use": {
+        "vis": "pub",
+        "tree": {
+          "path": {
+            "ident": "crate",
+            "tree": {
+              "group": [
+                {
+                  "path": {
+                    "ident": "ast_enum",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "GenericArgument"
+                        },
+                        {
+                          "ident": "PathArguments"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "path": {
+                    "ident": "ast_struct",
+                    "tree": {
+                      "group": [
+                        {
+                          "ident": "AngleBracketedGenericArguments"
+                        },
+                        {
+                          "ident": "AssocConst"
+                        },
+                        {
+                          "ident": "AssocType"
+                        },
+                        {
+                          "ident": "Constraint"
+                        },
+                        {
+                          "ident": "ParenthesizedGenericArguments"
+                        },
+                        {
+                          "ident": "Path"
+                        },
+                        {
+                          "ident": "PathSegment"
+                        },
+                        {
+                          "ident": "QSelf"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "impl": {
+        "trait": [
+          false,
+          {
+            "segments": [
+              {
+                "ident": "Default"
+              }
+            ]
+          }
+        ],
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "PathArguments"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "ident": "default",
+              "inputs": [],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "Self"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "path": {
+                        "segments": [
+                          {
+                            "ident": "PathArguments"
+                          },
+                          {
+                            "ident": "None"
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "impl": {
+        "self_ty": {
+          "path": {
+            "segments": [
+              {
+                "ident": "PathArguments"
+              }
+            ]
+          }
+        },
+        "items": [
+          {
+            "fn": {
+              "vis": {
+                "restricted": {
+                  "path": {
+                    "segments": [
+                      {
+                        "ident": "crate"
+                      }
+                    ]
+                  }
+                }
+              },
+              "ident": "is_none",
+              "inputs": [
+                {
+                  "receiver": {
+                    "ref": true,
+                    "ty": {
+                      "reference": {
+                        "elem": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Self"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "output": {
+                "path": {
+                  "segments": [
+                    {
+                      "ident": "bool"
+                    }
+                  ]
+                }
+              },
+              "stmts": [
+                {
+                  "expr": [
+                    {
+                      "match": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "self"
+                              }
+                            ]
+                          }
+                        },
+                        "arms": [
+                          {
+                            "pat": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "PathArguments"
+                                  },
+                                  {
+                                    "ident": "None"
+                                  }
+                                ]
+                              }
+                            },
+                            "body": {
+                              "lit": {
+                                "bool": true
+                              }
+                            }
+                          },
+                          {
+                            "pat": {
+                              "or": {
+                                "cases": [
+                                  {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "PathArguments"
+                                          },
+                                          {
+                                            "ident": "AngleBracketed"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "_": {}
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "tuple_struct": {
+                                      "path": {
+                                        "segments": [
+                                          {
+                                            "ident": "PathArguments"
+                                          },
+                                          {
+                                            "ident": "Parenthesized"
+                                          }
+                                        ]
+                                      },
+                                      "elems": [
+                                        {
+                                          "_": {}
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            "body": {
+                              "lit": {
+                                "bool": false
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    false
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

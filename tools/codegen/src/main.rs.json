@@ -1,0 +1,379 @@
+{
+  "attrs": [
+    {
+      "style": "inner",
+      "meta": {
+        "list": {
+          "path": {
+            "segments": [
+              {
+                "ident": "allow"
+              }
+            ]
+          },
+          "delimiter": "paren",
+          "tokens": [
+            {
+              "ident": "clippy"
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "joint"
+              }
+            },
+            {
+              "punct": {
+                "op": ":",
+                "spacing": "alone"
+              }
+            },
+            {
+              "ident": "needless_pass_by_value"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "mod": {
+        "attrs": [
+          {
+            "style": "outer",
+            "meta": {
+              "path": {
+                "segments": [
+                  {
+                    "ident": "macro_use"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "ident": "file",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "ident": "ast_enum",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "ident": "ast_struct",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "ident": "convert",
+        "semi": true
+      }
+    },
+    {
+      "mod": {
+        "ident": "traverse",
+        "semi": true
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "path": {
+            "ident": "std",
+            "tree": {
+              "path": {
+                "ident": "path",
+                "tree": {
+                  "ident": "Path"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "use": {
+        "tree": {
+          "rename": {
+            "ident": "fs_err",
+            "rename": "fs"
+          }
+        }
+      }
+    },
+    {
+      "fn": {
+        "ident": "main",
+        "inputs": [],
+        "output": null,
+        "stmts": [
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "syn_json"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "Path"
+                              },
+                              {
+                                "ident": "new"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "macro": {
+                              "path": {
+                                "segments": [
+                                  {
+                                    "ident": "env"
+                                  }
+                                ]
+                              },
+                              "delimiter": "paren",
+                              "tokens": [
+                                {
+                                  "lit": "\"CARGO_MANIFEST_DIR\""
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "join",
+                    "args": [
+                      {
+                        "lit": {
+                          "str": "\"syn.json\""
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "defs"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "fs"
+                              },
+                              {
+                                "ident": "read_to_string"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "path": {
+                              "segments": [
+                                {
+                                  "ident": "syn_json"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "let": {
+              "pat": {
+                "ident": {
+                  "ident": "defs"
+                }
+              },
+              "init": {
+                "expr": {
+                  "method_call": {
+                    "receiver": {
+                      "call": {
+                        "func": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "serde_json"
+                              },
+                              {
+                                "ident": "from_str"
+                              }
+                            ]
+                          }
+                        },
+                        "args": [
+                          {
+                            "reference": {
+                              "expr": {
+                                "path": {
+                                  "segments": [
+                                    {
+                                      "ident": "defs"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "method": "unwrap",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ast_struct"
+                        },
+                        {
+                          "ident": "generate"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "defs"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "ast_enum"
+                        },
+                        {
+                          "ident": "generate"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "defs"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          },
+          {
+            "expr": [
+              {
+                "call": {
+                  "func": {
+                    "path": {
+                      "segments": [
+                        {
+                          "ident": "convert"
+                        },
+                        {
+                          "ident": "generate"
+                        }
+                      ]
+                    }
+                  },
+                  "args": [
+                    {
+                      "reference": {
+                        "expr": {
+                          "path": {
+                            "segments": [
+                              {
+                                "ident": "defs"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              true
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
