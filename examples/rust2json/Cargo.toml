@@ -5,6 +5,7 @@ edition = "2021"
 [dependencies]
 syn-serde = { path = "../..", features = ["json"] }
 syn = { version = "2", features = ["full"] }
+walkdir = "2.5.0"
 
 [lints]
 workspace = true
